@@ -5,6 +5,7 @@
 #include "VestigeLimbComponent.generated.h"
 
 class AGrappleAnchor;
+class UVestigeTentacleVisualAdapter;
 
 UENUM(BlueprintType)
 enum class EVestigeGrappleState : uint8
@@ -51,6 +52,9 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Nocturne|Vestige Limb")
     AGrappleAnchor* FindBestAnchor() const;
 
+    UFUNCTION(BlueprintCallable, Category = "Nocturne|Vestige Limb|Visuals")
+    void SetVisualAdapter(UVestigeTentacleVisualAdapter* NewVisualAdapter);
+
     UFUNCTION(BlueprintCallable, Category = "Nocturne|Vestige Limb")
     EVestigeGrappleState GetGrappleState() const;
 
@@ -93,11 +97,15 @@ public:
 private:
     void SetGrappleState(EVestigeGrappleState NewState);
     void SetCurrentAnchor(AGrappleAnchor* NewAnchor);
+    void NotifyVisualAdapterForState(EVestigeGrappleState NewState);
     void TickPullToPoint(float DeltaTime);
     void FinishGrappleRelease();
 
     UPROPERTY(Transient)
     AGrappleAnchor* CurrentAnchor = nullptr;
+
+    UPROPERTY(Transient)
+    UVestigeTentacleVisualAdapter* VisualAdapter = nullptr;
 
     EVestigeGrappleState GrappleState = EVestigeGrappleState::Idle;
     EVestigeGrappleFailureReason LastFailureReason = EVestigeGrappleFailureReason::None;
