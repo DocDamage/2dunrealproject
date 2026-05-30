@@ -1,5 +1,6 @@
 #include "VestigeLimbComponent.h"
 #include "GrappleAnchor.h"
+#include "VestigeTentacleVisualAdapter.h"
 #include "DrawDebugHelpers.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -22,6 +23,12 @@ void UVestigeLimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
     if (GrappleState == EVestigeGrappleState::PullingPlayer)
     {
         TickPullToPoint(DeltaTime);
+    }
+
+    if (CurrentAnchor && VisualAdapter)
+    {
+        const FVector OwnerLocation = GetOwner() ? GetOwner()->GetActorLocation() : FVector::ZeroVector;
+        VisualAdapter->UpdateLimbTarget(OwnerLocation, CurrentAnchor->GetAnchorLocation(), DeltaTime);
     }
 
     if (bDrawDebugGrapple && CurrentAnchor)
@@ -65,6 +72,12 @@ void UVestigeLimbComponent::CancelGrapple()
 {
     LastFailureReason = EVestigeGrappleFailureReason::Interrupted;
     CurrentPullVelocity = FVector::ZeroVector;
+
+    if (VisualAdapter)
+    {
+        VisualAdapter->OnGrappleCancelled();
+    }
+
     SetCurrentAnchor(nullptr);
     SetGrappleState(EVestigeGrappleState::Idle);
 }
@@ -108,6 +121,11 @@ AGrappleAnchor* UVestigeLimbComponent::FindBestAnchor() const
     return BestAnchor;
 }
 
+void UVestigeLimbComponent::SetVisualAdapter(UVestigeTentacleVisualAdapter* NewVisualAdapter)
+{
+    VisualAdapter = NewVisualAdapter;
+}
+
 EVestigeGrappleState UVestigeLimbComponent::GetGrappleState() const
 {
     return GrappleState;
@@ -132,6 +150,7 @@ void UVestigeLimbComponent::SetGrappleState(EVestigeGrappleState NewState)
 
     GrappleState = NewState;
     OnGrappleStateChanged.Broadcast(GrappleState);
+    NotifyVisualAdapterForState(GrappleState);
 }
 
 void UVestigeLimbComponent::SetCurrentAnchor(AGrappleAnchor* NewAnchor)
@@ -143,6 +162,37 @@ void UVestigeLimbComponent::SetCurrentAnchor(AGrappleAnchor* NewAnchor)
 
     CurrentAnchor = NewAnchor;
     OnAnchorChanged.Broadcast(CurrentAnchor);
+
+    if (VisualAdapter && CurrentAnchor)
+    {
+        VisualAdapter->OnGrappleAnchorSelected(CurrentAnchor);
+    }
+}
+
+void UVestigeLimbComponent::NotifyVisualAdapterForState(EVestigeGrappleState NewState)
+{
+    if (!VisualAdapter)
+    {
+        return;
+    }
+
+    switch (NewState)
+    {
+    case EVestigeGrappleState::SearchingForAnchor:
+        VisualAdapter->OnGrappleSearchStarted();
+        break;
+    case EVestigeGrappleState::Extending:
+        VisualAdapter->OnGrappleExtendStarted(CurrentAnchor);
+        break;
+    case EVestigeGrappleState::PullingPlayer:
+        VisualAdapter->OnGrapplePullStarted(CurrentAnchor);
+        break;
+    case EVestigeGrappleState::Releasing:
+        VisualAdapter->OnGrappleReleased();
+        break;
+    default:
+        break;
+    }
 }
 
 void UVestigeLimbComponent::TickPullToPoint(float DeltaTime)
