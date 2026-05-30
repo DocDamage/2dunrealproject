@@ -1,0 +1,16 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.7",
+  "Category": "Games",
+  "Modules": [
+    {
+      "Name": "NocturneSignal",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    { "Name": "Paper2D", "Enabled": true },
+    { "Name": "EnhancedInput", "Enabled": true }
+  ]
+}
