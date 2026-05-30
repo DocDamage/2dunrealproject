@@ -14,6 +14,11 @@ UVestigeLimbComponent::UVestigeLimbComponent()
 void UVestigeLimbComponent::BeginPlay()
 {
     Super::BeginPlay();
+
+    if (!VisualAdapter && GetOwner())
+    {
+        VisualAdapter = GetOwner()->FindComponentByClass<UVestigeTentacleVisualAdapter>();
+    }
 }
 
 void UVestigeLimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
