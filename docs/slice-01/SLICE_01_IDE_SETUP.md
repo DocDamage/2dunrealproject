@@ -4,21 +4,21 @@
 
 ---
 
-## 1. Required Manual Patch
+## 1. Build File Status
 
-The GitHub connector blocked creation of:
+The required module build file is now present in the project:
 
 ```text
 Source/NocturneSignal/NocturneSignal.Build.cs
 ```
 
-Create it manually before compiling. The exact content is in:
+The historical manual patch content remains documented here for reference:
 
 ```text
 docs/slice-01/MANUAL_BUILD_CS_PATCH.md
 ```
 
-Without this file, Unreal project generation and C++ compile will fail.
+If this file is missing in a future checkout, Unreal project generation and C++ compile will fail.
 
 ---
 
@@ -44,7 +44,7 @@ Source/NocturneSignal/Private/
 
 ## 3. Regenerate Project Files
 
-After adding `NocturneSignal.Build.cs` manually:
+With `NocturneSignal.Build.cs` present:
 
 1. Right-click `NocturneSignal.uproject`.
 2. Select `Generate Visual Studio project files` or the matching IDE generation option.
@@ -222,7 +222,6 @@ Run these tests before adding enemies or combat:
 
 | Blocker | Impact | Action |
 |---|---|---|
-| `NocturneSignal.Build.cs` not committed | Compile fails | Create manually from patch doc |
 | Exact Fab plugin IDs unknown | Cannot enable plugins safely in repo | Capture from local `.uplugin` files |
 | Final Veyra art not in repo | Placeholder visuals only | Add in IDE later |
 | No map assets committed yet | Test map must be made locally | Use placeholder geometry first |

@@ -11,11 +11,12 @@
 | Field | Value |
 |---|---|
 | Uploaded archives available | Yes |
-| Archives decompressed | No |
-| Inventory generated | No |
-| First-slice assets selected | No |
-| Unreal import paths approved | No |
-| Current status | Waiting for controlled decompression and inventory |
+| Fab VaultCache available | Yes |
+| Archives decompressed | Yes |
+| Inventory generated | Yes |
+| First-slice assets selected | Partial |
+| Unreal import paths approved | Partial |
+| Current status | Uploaded archive inventory generated; Fab VaultCache and direct project content inventories captured; Jacob imported as temporary/reference character with expanded retargeted animation libraries; restarted editor sees copied RogueCharacterModel packages and Jacob retarget outputs |
 
 ---
 
@@ -81,6 +82,110 @@ Recommended local/session paths:
 
 Do not import directly from zip archives.
 
+Generated inventory files:
+
+```text
+docs/asset-intake/ASSET_INVENTORY_SUMMARY.md
+docs/asset-intake/GENERATED_ASSET_INVENTORY.csv
+docs/asset-intake/FAB_VAULTCACHE_INVENTORY.md
+docs/asset-intake/JACOB_CHARACTER_INTAKE.md
+docs/asset-intake/JACOB_ABILITY_ANIMATION_COVERAGE.md
+docs/asset-intake/ANIMATION_SOURCE_INVENTORY.md
+```
+
+The local `RogueCharacterModel/` folder is a copied sample/content project. Do not treat the whole copied project as source-of-truth gameplay content; migrate only selected packages. For Unreal `.uasset` packages, preserve their original `Content/<PackageName>/...` paths when references require it.
+
+Jacob has been imported intentionally as a temporary/reference character:
+
+```text
+SourceArt/Jacob/
+Content/NocturneSignal/Characters/Jacob/
+```
+
+The Jacob source asset is CC BY 4.0; preserve attribution from `SourceArt/Jacob/License.txt`.
+
+Expanded Jacob animation source staging has been added intentionally:
+
+```text
+SourceArt/AnimationSources/MCO_TC_Sword/
+SourceArt/AnimationSources/MotifectSword/
+SourceArt/AnimationSources/MotifectMartialArts/
+SourceArt/AnimationSources/RealisticCombatMoves/
+SourceArt/AnimationSources/UniversalAnimationLibrary1/
+SourceArt/AnimationSources/UniversalAnimationLibrary2/
+SourceArt/AnimationSources/ActorCoreWalk/
+SourceArt/AnimationSources/ActorCoreTactical/
+SourceArt/AnimationSources/GameAnimationSample/
+SourceArt/AnimationSources/ParagonMannyCurated/
+SourceArt/AnimationSources/FightAnimationMocapPack/
+```
+
+These are imported into `/Game/NocturneSignal/AnimationSources/...` first, then retargeted into `/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/...`.
+
+Robotic tentacle visual source staging has also been added intentionally:
+
+```text
+SourceArt/Tentacles/RoboticTentacleHands/hand_18.glb
+SourceArt/Tentacles/RoboticTentacleHands/metadata.json
+SourceArt/Tentacles/RoboticTentacleHands/thumbnail.png
+Tools/Unreal/import_robotic_tentacle_hands.py
+```
+
+Planned Unreal destination:
+
+```text
+Content/NocturneSignal/Characters/Jacob/Tentacles/RoboticTentacleHands/
+```
+
+Imported Unreal destination:
+
+```text
+Content/NocturneSignal/Characters/Jacob/Tentacles/RoboticTentacleHands/
+```
+
+The live editor import produced 32 `.uasset` files. The current primary mesh assignment is:
+
+```text
+/Game/NocturneSignal/Characters/Jacob/Tentacles/RoboticTentacleHands/hand_18/SkeletalMeshes/Cylinder
+```
+
+Advanced Locomotion Mechanics UE5 is the exception because it ships Unreal `.uasset` packages rather than FBX source. Its source packages are copied at their original package paths so dependencies resolve:
+
+```text
+Content/Animation/
+Content/Mesh/Skeletal/Default/
+```
+
+Retargeted Jacob output remains namespaced:
+
+```text
+Content/NocturneSignal/Characters/Jacob/RetargetedAnimations/AdvancedLocomotionMechanicsUE5/
+```
+
+Selected `RogueCharacterModel` packages have also been copied at their original package paths:
+
+```text
+Content/FreeAnimationsPack/
+Content/RogueCharacter/
+Content/Vefects/Tentacles_VFX/
+```
+
+Retargeted Jacob output for those animation candidates remains namespaced:
+
+```text
+Content/NocturneSignal/Characters/Jacob/RetargetedAnimations/FreeAnimationsPack/
+Content/NocturneSignal/Characters/Jacob/RetargetedAnimations/RogueCharacter/
+Content/NocturneSignal/Characters/Jacob/RetargetedAnimations/VefectsVexa/
+```
+
+Verified post-restart retarget counts:
+
+```text
+FreeAnimationsPack: 10 Jacob AnimSequences
+RogueCharacter: 7 Jacob AnimSequences
+VefectsVexa: 25 Jacob AnimSequences
+```
+
 ---
 
 ## 4. Inventory Fields
@@ -133,6 +238,7 @@ Content/NocturneSignal/Environments/ReliquaryOfWaking/Props/
 Content/NocturneSignal/Environments/ReliquaryOfWaking/Doors/
 Content/NocturneSignal/Environments/ReliquaryOfWaking/GrappleAnchors/
 Content/NocturneSignal/Characters/Veyra/
+Content/NocturneSignal/Characters/Jacob/
 Content/NocturneSignal/Enemies/Reliquary/
 Content/NocturneSignal/VFX/VestigeLimb/
 Content/NocturneSignal/Audio/NullVoice/
@@ -185,4 +291,4 @@ Deferred assets remain tracked here so they can be used later without repeating 
 
 ## 9. Next Action
 
-Run controlled decompression, then generate an inventory report before any Unreal import work.
+Select the first small set of Reliquary sheets from `GENERATED_ASSET_INVENTORY.csv`, then import only those assets into approved `Content/NocturneSignal/...` paths. For VaultCache content, migrate only selected assets through Unreal after a destination path and slice purpose are approved. Jacob can be used immediately as the temporary/reference character while the final 2D player identity is still unresolved.

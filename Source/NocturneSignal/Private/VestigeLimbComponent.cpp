@@ -195,6 +195,9 @@ void UVestigeLimbComponent::NotifyVisualAdapterForState(EVestigeGrappleState New
     case EVestigeGrappleState::Releasing:
         VisualAdapter->OnGrappleReleased();
         break;
+    case EVestigeGrappleState::Failed:
+        VisualAdapter->OnGrappleCancelled();
+        break;
     default:
         break;
     }

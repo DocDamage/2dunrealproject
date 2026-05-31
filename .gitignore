@@ -41,6 +41,8 @@ CrashReportClient/
 .DS_Store
 Thumbs.db
 desktop.ini
+__pycache__/
+*.py[cod]
 
 # Local-only notes/config
 Local/
@@ -50,3 +52,8 @@ Local/
 
 # Asset intake should stay outside Unreal Content unless explicitly imported
 nocturne_asset_intake/
+RogueCharacterModel/
+
+# Large local-only content packs. Commit only if Git LFS is introduced.
+Content/A_Surface_Footstep/
+Content/Vefects/

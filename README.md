@@ -10,7 +10,7 @@ The project targets a polished first playable slice proving SOTN-style player fe
 
 Active pre-production / first playable slice setup.
 
-The repository is currently documentation-first. Unreal project files and source code should be added only after toolchain, plugin, and asset intake decisions are recorded.
+The repository now contains the starter Unreal C++ project scaffold for Slice 1. Documentation remains the source of truth for scope, plugin intake, and asset intake decisions.
 
 ---
 

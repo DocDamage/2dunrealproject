@@ -2,7 +2,7 @@
 
 **Project:** Nocturne Signal  
 **Slice:** 0  
-**Status:** Open  
+**Status:** In Progress
 **Goal:** Establish the repo, documentation, plugin, and asset intake foundation before Unreal gameplay work expands.
 
 ---
@@ -32,11 +32,11 @@ Slice 0 does not need polished gameplay. It prepares the conditions for reliable
 | S0-D003 | Plugin register template | Fixed | `docs/plugins/PLUGIN_REGISTER.md` exists |
 | S0-D004 | Asset intake manifest template | Fixed | `docs/asset-intake/ASSET_INTAKE_MANIFEST.md` exists |
 | S0-D005 | Architecture decision record | Fixed | `docs/architecture/ARCHITECTURE_DECISIONS.md` exists |
-| S0-D006 | Risk register | Open | `docs/risks/RISK_REGISTER.md` exists |
-| S0-D007 | Verification matrix | Open | `docs/verification/VERIFICATION_MATRIX.md` exists |
+| S0-D006 | Risk register | Fixed | `docs/risks/RISK_REGISTER.md` exists |
+| S0-D007 | Verification matrix | Fixed | `docs/verification/VERIFICATION_MATRIX.md` exists |
 | S0-D008 | Controlled asset decompression | Open | Archives extracted outside Unreal `Content/` |
 | S0-D009 | Asset inventory report | Open | Inventory generated and linked here |
-| S0-D010 | `.uproject` plugin reconciliation | Blocked | Waiting for Unreal project file |
+| S0-D010 | `.uproject` plugin reconciliation | Fixed | Starter `.uproject` exists; enabled plugins are documented, FAB plugin identifiers still pending |
 
 ---
 
@@ -47,8 +47,8 @@ Required inputs:
 - Uploaded design documents.
 - Uploaded asset archives.
 - GitHub repository access.
-- Unreal Engine 5.7 project once created locally.
-- Local FAB plugin list once `.uproject` exists.
+- Unreal Engine 5.7 project scaffold.
+- Local FAB plugin list once exact plugin identifiers are available.
 
 ---
 
@@ -130,9 +130,9 @@ Before Unreal import, decide:
 
 ## 6. Plugin Intake Work Package
 
-Blocked until `.uproject` is available.
+Starter `.uproject` reconciliation is complete for currently enabled plugins: Paper2D and Enhanced Input.
 
-Once available:
+For additional local FAB plugins:
 
 1. Read the `.uproject` `Plugins` array.
 2. Add every plugin to `docs/plugins/PLUGIN_REGISTER.md`.

@@ -1,16 +1,93 @@
 {
-  "FileVersion": 3,
-  "EngineAssociation": "5.7",
-  "Category": "Games",
-  "Modules": [
-    {
-      "Name": "NocturneSignal",
-      "Type": "Runtime",
-      "LoadingPhase": "Default"
-    }
-  ],
-  "Plugins": [
-    { "Name": "Paper2D", "Enabled": true },
-    { "Name": "EnhancedInput", "Enabled": true }
-  ]
+	"FileVersion": 3,
+	"EngineAssociation": "5.7",
+	"Category": "Games",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "NocturneSignal",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Paper2D",
+			"Enabled": true
+		},
+		{
+			"Name": "PaperZD",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/c4b43502026047d89296cd7bffd92828"
+		},
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		},
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		},
+		{
+			"Name": "ActorModifier",
+			"Enabled": true
+		},
+		{
+			"Name": "ActorModifierCore",
+			"Enabled": true
+		},
+		{
+			"Name": "ActorPalette",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayBehaviors",
+			"Enabled": true
+		},
+		{
+			"Name": "TargetingSystem",
+			"Enabled": true
+		},
+		{
+			"Name": "SurfaceEffects",
+			"Enabled": true
+		},
+		{
+			"Name": "SQLiteSupport",
+			"Enabled": true
+		},
+		{
+			"Name": "Paper2DPlus",
+			"Enabled": true
+		},
+		{
+			"Name": "DayNightSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/Fab/product/8700611f-e21e-4cfd-8c33-a0cfc38398a4"
+		},
+		{
+			"Name": "Pasma_Engine_Neural_Hair_Dynamics",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/Fab/product/3e707339-09bf-416d-838b-bd91777267b7",
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "LingotionThespeon",
+			"Enabled": true
+		},
+		{
+			"Name": "LocoHelperAI",
+			"Enabled": true
+		},
+		{
+			"Name": "AnimationWarping",
+			"Enabled": true
+		},
+		{
+			"Name": "UnrealMCPBridge",
+			"Enabled": true
+		}
+	]
 }

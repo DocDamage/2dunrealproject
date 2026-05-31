@@ -18,8 +18,8 @@
 | V-004 | Asset intake manifest | File inspection | `docs/asset-intake/ASSET_INTAKE_MANIFEST.md` exists | Fixed | Repo file exists |
 | V-005 | Architecture decisions | File inspection | `docs/architecture/ARCHITECTURE_DECISIONS.md` exists | Fixed | Repo file exists |
 | V-006 | Risk register | File inspection | `docs/risks/RISK_REGISTER.md` exists | Fixed | Repo file exists |
-| V-007 | Unreal project opens | Editor launch | UE 5.7 opens project without fatal plugin errors | Open | Not tested |
-| V-008 | C++ compile | Build in IDE or Unreal | Project compiles cleanly | Open | Not tested |
+| V-007 | Unreal project opens | Editor launch | UE 5.7 opens project without fatal plugin errors | Verified | Live editor is open on 2026-05-30; Unreal MCP bridge reports UE `5.7.4-51494982+++UE5+Release-5.7` |
+| V-008 | C++ compile | Build in IDE or Unreal | Project compiles cleanly | Verified | Non-MCP UBT build succeeded on 2026-05-31 after the editor was closed: `NocturneSignalEditor Win64 Development`; updated Jacob/tentacle C++ and UnrealMCPBridge plugin compiled successfully. Remaining output was deprecation warnings in plugin code, not build errors |
 | V-009 | Packaged build | Unreal package | Package succeeds with required plugins | Open | Not tested |
 
 ---
@@ -29,11 +29,12 @@
 | ID | Plugin/System | Verification Method | Pass Condition | Status | Evidence |
 |---|---|---|---|---|---|
 | V-010 | Paper2D | Editor/plugin check | Plugin enabled and sprites render | Open | Not tested |
-| V-011 | PaperZD | Compile + PIE + package | Animation framework works without blocking package | Open | Not tested |
+| V-011 | PaperZD / current plugin set | Compile + PIE + package | Animation framework and enabled plugins work without blocking package | In Progress | Plugin ids resolve locally; non-MCP editor-target compile succeeds. PIE and packaging still need validation |
 | V-012 | Enhanced Input | PIE input test | Keyboard/controller actions fire correctly | Open | Not tested |
 | V-013 | Niagara | PIE VFX test | 2D-compatible test effect renders correctly | Open | Not tested |
 | V-014 | MetaSounds | Beat clock test | Beat event timing is reliable enough for Choir Resonance | Open | Not tested |
-| V-015 | FAB plugins | `.uproject` reconciliation | Every enabled plugin documented in plugin register | Blocked | Waiting for `.uproject` |
+| V-015 | Enabled plugin reconciliation | `.uproject` reconciliation | Every enabled plugin documented in plugin register | Fixed | Current `.uproject` enabled plugin list is documented; compile verification pending Live Coding shutdown |
+| V-016 | Unreal MCP bridge | Codex MCP config + editor bridge status | Codex exposes Unreal MCP bridge tools and attaches to the open UE project | Verified | Verified on 2026-05-30: `unreal_mcp_ping`, `editor.engine_version`, `editor.project_name`, `level.current_map`, and `asset.exists` all return successfully against UE `5.7.4` on `127.0.0.1:30020`. Previous timeout was reproduced as a broad/incorrectly shaped query issue, not a dead bridge; use paginated `asset.list` filter objects and narrow `anim.list_sequences` `path_prefix` calls |
 
 ---
 
@@ -41,11 +42,20 @@
 
 | ID | System | Verification Method | Pass Condition | Status | Evidence |
 |---|---|---|---|---|---|
-| V-020 | Archive decompression | Controlled extraction | All selected archives extract without corruption | Open | Not tested |
-| V-021 | Asset inventory | Generated report | Inventory includes paths, types, image dimensions, categories | Open | Not generated |
+| V-020 | Archive decompression | Controlled extraction | All selected archives extract without corruption | Verified | 135 zips extracted successfully to `F:\Nocturne Signal\asset_intake\extracted` on 2026-05-30 |
+| V-021 | Asset inventory | Generated report | Inventory includes paths, types, image dimensions, categories | Verified | `docs/asset-intake/GENERATED_ASSET_INVENTORY.csv` generated with 158 PNG rows and dimensions |
 | V-022 | First-slice selection | Manifest review | Required Reliquary categories identified | Open | Not selected |
-| V-023 | Import path policy | Manual inspection | Assets use `Content/NocturneSignal/...` paths | Open | Not tested |
+| V-023 | Import path policy | Manual inspection | Assets use `Content/NocturneSignal/...` paths | In Progress | Jacob imported under `Content/NocturneSignal/Characters/Jacob`; other content imports still need review |
 | V-024 | Visual readability | In-editor review | Collision edges and interactables are readable | Open | Not tested |
+| V-025 | Jacob temporary character import | Unreal import + file inspection | Skeletal mesh, skeleton, animations, materials, and textures exist under approved path | Verified | Imported on 2026-05-30 to `/Game/NocturneSignal/Characters/Jacob`; source and attribution stored under `SourceArt/Jacob` |
+| V-026 | Jacob retargeted animation set | Unreal retarget + asset registry check | Retargeted Jacob animation sequences exist under approved path and use Jacob skeleton | Verified | 44 RamsterZ `JAC_*` AnimSequences created under `/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/RamsterZ`; `JAC_Standing_Idle` resolves to `SK_Jacob_Skeleton` |
+| V-027 | Jacob Animation Blueprint | Asset creation + state-machine inspection | Animation Blueprint exists and has a validated locomotion state machine | In Progress | `/Game/NocturneSignal/Characters/Jacob/ABP_Jacob` created and saved; `ANocturnePlayerCharacter` now exposes slide, jump, double-jump, tentacle attack, grapple, and consume animation hooks; state machine wiring still open |
+| V-028 | Jacob sword animation source import | Unreal import + asset registry check | Sword source skeleton and selected animations exist under approved intake namespace | Verified | MCO TC Sword source skeleton and 4 AnimSequences imported under `/Game/NocturneSignal/AnimationSources/MCO_TC_Sword` on 2026-05-30 |
+| V-029 | Jacob sword retargeted animation set | Unreal retarget + asset registry check | Retargeted sword clips exist under approved Jacob path and use Jacob skeleton | Verified | 4 MCO TC Sword `JAC_*` AnimSequences created under `/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/MCO_TC_Sword`; all resolve to `SK_Jacob_Skeleton`; no stray root `JAC_*` assets found |
+| V-030 | Jacob sword combo montage | Montage creation + asset inspection | Combo montage exists, uses Jacob skeleton, and has named sections for gameplay triggering | Verified | `/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_SwordCombo` created; skeleton is `SK_Jacob_Skeleton`; sections are `Default`, `ComboStart`, `ComboRecover`; length is 5.4667s |
+| V-031 | Jacob animation preview level | Level creation + actor summary | Preview map exists with labeled actors for selected Jacob sword/traversal/tentacle visual clips | Verified | `/Game/NocturneSignal/Characters/Jacob/Maps/L_JacobAnimationPreview` rebuilt and saved through non-MCP `UnrealEditor-Cmd` on 2026-05-31; curated preview now includes 17 Jacob animation rows plus 3 robotic tentacle mesh rows. Use command-line editor/full editor for this script; `-nullrhi` crashes inside engine/editor scripting while spawning skeletal preview actors |
+| V-032 | Jacob Motifect sword import | Unreal import + asset registry check | Selected Motifect sword clips import under approved intake namespace | Verified | 4 Motifect sword AnimSequences imported under `/Game/NocturneSignal/AnimationSources/MotifectSword`; known Jaw/LeftEye/RightEye track warnings accepted after asset verification |
+| V-033 | Jacob Motifect sword retarget/montage set | Unreal retarget + montage inspection | Retargeted Motifect sword clips and gameplay montages exist and use Jacob skeleton | Verified | 4 Motifect `JAC_*` AnimSequences created under `/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/MotifectSword`; 3 montages created under `/Game/NocturneSignal/Characters/Jacob/Montages`; all resolve to `SK_Jacob_Skeleton` |
 
 ---
 
@@ -53,12 +63,12 @@
 
 | ID | System | Verification Method | Pass Condition | Status | Evidence |
 |---|---|---|---|---|---|
-| V-030 | Player spawn | PIE test | Player spawns in test room and accepts input | Open | Not tested |
-| V-031 | Run movement | 30-second movement test | No jitter, sticking, or unintended acceleration | Open | Not tested |
-| V-032 | Jump/fall | Repeated jump test | Jump arc is consistent and readable | Open | Not tested |
-| V-033 | Landing | Landing event test | Landing state triggers consistently | Open | Not tested |
-| V-034 | Platform collision | Platform test room | No ledge sticking beyond intended behavior | Open | Not tested |
-| V-035 | Placeholder art | Sprite swap test | Movement survives placeholder/final art swap | Open | Not tested |
+| V-034 | Player spawn | PIE test | Player spawns in test room and accepts input | Open | Not tested |
+| V-035 | Run movement | 30-second movement test | No jitter, sticking, or unintended acceleration | Open | Not tested |
+| V-036 | Jump/fall | Repeated jump test | Jump arc is consistent and readable | Open | Not tested |
+| V-037 | Landing | Landing event test | Landing state triggers consistently | Open | Not tested |
+| V-038 | Platform collision | Platform test room | No ledge sticking beyond intended behavior | Open | Not tested |
+| V-039 | Placeholder art | Sprite swap test | Movement survives placeholder/final art swap | Open | Not tested |
 
 ---
 
@@ -90,6 +100,10 @@
 | V-064 | Stagger | Hit reaction test | Enemy stagger triggers correctly | Open | Future slice |
 | V-065 | Bonespike form | Attack test | Bonespike has intended range/damage/readability | Open | Future slice |
 | V-066 | Choir Blade form | Attack test | Choir Blade supports basic 3-hit arc later | Open | Future slice |
+| V-067 | Jacob tentacle montage coverage | Montage inspection + code hook inspection | Tentacle attack, grapple, and consume montage placeholders exist, resolve to Jacob skeleton, and have player-callable trigger hooks | Verified | `AM_Jacob_TentacleAttack_ForceChoke`, `AM_Jacob_TentacleGrapple_Start/Loop/End`, and `AM_Jacob_TentacleConsume_SneakNeckBreak/KidneyNeck` exist; all resolve to `SK_Jacob_Skeleton`; `ANocturnePlayerCharacter` exposes `TriggerTentacleAttack`, `TriggerTentacleGrapple`, and `TriggerTentacleConsume` |
+| V-068 | Jacob traversal animation coverage | Asset inventory + code hook inspection | Slide, jump, and true double-jump traversal clips are identified or explicitly marked missing and have player-callable hooks | Verified | UAL1 jump start/loop/land, UAL2 slide start/loop/exit, and UAL2 NinjaJump start/loop/land are retargeted to Jacob and documented in `docs/asset-intake/JACOB_ABILITY_ANIMATION_COVERAGE.md`; all resolve to `SK_Jacob_Skeleton`; `ANocturnePlayerCharacter` exposes `StartSlide`, `StopSlide`, and double-jump montage selection through `StartJump` |
+| V-069 | Jacob expanded animation library coverage | Unreal import/retarget + asset registry check | Useful provided libraries are imported/retargeted or explicitly deferred with reason | In Progress | Full UAL1/UAL2 retarget counts are 45/43; Motifect Martial Arts imports/retargets 40; Realistic Combat imports/retargets 10; Advanced Locomotion Mechanics UE5 imports 296 source AnimSequences and retargets 296 to Jacob. After editor restart, MCP verified additional Jacob retargets: VefectsVexa 25, FreeAnimationsPack 10, RogueCharacter 7, all resolving to `SK_Jacob_Skeleton`. ActorCore, Game Animation Sample, Paragon Manny, and Fight Mocap remain staged/scripted for later source import |
+| V-069A | Jacob robotic tentacle visual source | Source inspection + Unreal import + runtime attachment test | Real tentacle mesh/animations/VFX are imported or staged, assigned to `VestigeTentacleVisualAdapter`, and visible during grapple/attack/consume hooks | In Progress | `SourceArt/Tentacles/RoboticTentacleHands/hand_18.glb` imported through the live editor into `/Game/NocturneSignal/Characters/Jacob/Tentacles/RoboticTentacleHands`; 32 imported assets exist including 6 skeletal meshes and 3 AnimSequences. `ANocturnePlayerCharacter` now defaults `UVestigeTentacleVisualAdapter` to the imported `Cylinder` skeletal mesh and toggles/clears it for tentacle attack, consume, and failed grapple. Non-MCP UBT compile succeeds, and the preview map includes three robotic tentacle mesh rows; PIE/runtime visual validation remains open |
 
 ---
 

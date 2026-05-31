@@ -1,8 +1,8 @@
-# Manual Patch Required — `NocturneSignal.Build.cs`
+# Historical Manual Patch — `NocturneSignal.Build.cs`
 
-The GitHub connector repeatedly blocked direct creation of `Source/NocturneSignal/NocturneSignal.Build.cs` during scaffold setup. This file is required before the Unreal C++ project can compile.
+The GitHub connector repeatedly blocked direct creation of `Source/NocturneSignal/NocturneSignal.Build.cs` during scaffold setup. The file is now present in the local project and should remain part of the repo. This note is kept as recovery documentation in case a future checkout is missing it.
 
-Create this file manually in the IDE or local repo:
+Required path:
 
 ```text
 Source/NocturneSignal/NocturneSignal.Build.cs
@@ -36,7 +36,7 @@ public class NocturneSignal : ModuleRules
 }
 ```
 
-After creating it, regenerate project files and compile.
+After confirming it exists, regenerate project files and compile.
 
 Expected first compile path:
 

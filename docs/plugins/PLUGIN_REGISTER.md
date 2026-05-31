@@ -14,7 +14,7 @@
 | Current `.uproject` available in repo | Yes |
 | Local FAB plugins installed by Doc | Yes |
 | Plugin reconciliation complete | Partial |
-| Current status | Starter `.uproject` committed; waiting for exact local plugin identifiers for FAB plugins |
+| Current status | Current `.uproject` plugin identifiers resolve locally; Pasma and other marketplace/editor helpers are enabled and still need compile/editor verification |
 
 ---
 
@@ -23,12 +23,12 @@
 | Plugin | Category | Required For Slice 0/1? | Status | Notes |
 |---|---|---:|---|---|
 | Paper2D | Unreal built-in / 2D rendering | Yes | Added to `.uproject` | Required for 2D sprites, flipbooks, tile/sprite assets |
-| PaperZD | Animation framework | Yes | Required, not yet added | Core animation stack; exact plugin identifier must be confirmed locally before adding |
+| PaperZD | Animation framework | Yes | Enabled in `.uproject`; compile verification blocked by active Live Coding session | Exact plugin identifier: `PaperZD`; installed version 2.2.3 for UE 5.7 |
 | Enhanced Input | Unreal built-in / input | Yes | Added to `.uproject` | Required for modern input mapping and controller support |
-| Pasma Engine: Neural Hair Dynamics | FAB / ZOAZ | Yes, for tentacle/limb dynamics evaluation | Required-unresolved | Listing says it uses Unreal NNE and exposes Blueprint control; exact `.uproject` plugin `Name` unknown |
-| Tentacles VFX | FAB / Vefects | Yes, for grapple/tentacle presentation | Required-unresolved | Listing describes semi-procedural tentacle Blueprint behaviours and customizable VFX; exact `.uproject` plugin `Name` unknown |
-| Unreal Neural Network Engine / NNE | Unreal built-in dependency | Required if Pasma is used | Required-unresolved | Pasma listing says it requires Unreal's native NNE plugin; exact `.uproject` plugin `Name` must be confirmed locally |
-| Niagara | Unreal built-in / VFX | Not Slice 1 unless plugin needs it | Planned | Needed for 2D-compatible VFX after movement proof |
+| Pasma Engine: Neural Hair Dynamics | FAB / ZOAZ | Yes, for tentacle/limb dynamics evaluation | Enabled locally; unverified | Exact plugin identifier: `Pasma_Engine_Neural_Hair_Dynamics`; experimental Win64 plugin; keep core gameplay independent |
+| Tentacles VFX | FAB / Vefects | Yes, for grapple/tentacle presentation | Content found locally; plugin descriptor not found | `RogueCharacterModel\Content\Vefects\Tentacles_VFX` exists, but no `.uplugin` descriptor was found under UE 5.7 Marketplace plugins, VaultCache, or the nested content folder |
+| Unreal Neural Network Engine / NNE | Unreal built-in dependency | Required if Pasma is used | Required dependency | Pasma depends on `NNERuntimeORT` |
+| Niagara | Unreal built-in / VFX | Required by PaperZD plugin dependency | Enabled in `.uproject` | Also needed for 2D-compatible VFX after movement proof |
 | MetaSounds | Unreal built-in / audio | Not Slice 1 | Planned | Needed for Choir Resonance beat clock and reactive score |
 | World Partition | Unreal built-in / world streaming | No | Deferred | Do not enable for first tiny test rooms unless needed |
 
@@ -36,12 +36,76 @@
 
 ## 3. FAB / Marketplace Plugin Register
 
-These are the known local plugin requirements from Doc. The exact Unreal plugin identifiers still need to be copied from the local project or plugin `.uplugin` files.
+These are the known local plugin requirements from Doc and the installed UE 5.7 Marketplace descriptors.
 
-| Plugin Name | Source | Listing URL | Enabled In `.uproject` | Version | UE 5.7 Compatible | Required For | Slice Priority | Risk | Decision |
+| Plugin Name | Exact `.uproject` Name | Source | Enabled In `.uproject` | Version | UE 5.7 Compatible | Required For | Slice Priority | Risk | Decision |
 |---|---|---|---:|---|---:|---|---|---|---|
-| Pasma Engine: Neural Hair Dynamics | FAB / ZOAZ | `https://www.fab.com/listings/3e707339-09bf-416d-838b-bd91777267b7` | No | Unknown | Unknown | Vestige Limb / tentacle dynamics evaluation | Required-Slice-1 | High | Required, but do not add until exact plugin identifier is known |
-| Tentacles VFX | FAB / Vefects | `https://www.fab.com/listings/2301965d-18e8-4df5-8613-a4cebd7915de` | No | Unknown | Unknown | Grapple/tentacle VFX and limb presentation | Required-Slice-1 | High | Required, but do not add until exact plugin identifier is known |
+| PaperZD | `PaperZD` | FAB / Critical Failure Studio | Yes | 2.2.3 | Descriptor targets 5.7.0 | 2D animation graph and notifies | Required-Slice-1 | Critical | Enabled; verify after Live Coding is closed |
+| Pasma Engine: Neural Hair Dynamics | `Pasma_Engine_Neural_Hair_Dynamics` | FAB / ZOAZ | Yes | 1.0.0 | Descriptor targets 5.7.0 Win64 | Vestige Limb / tentacle dynamics evaluation | Required-Slice-1 | High | Enabled locally; verify before relying on it |
+| Tentacles VFX | Unknown | FAB / Vefects | No | Unknown | Unknown | Grapple/tentacle VFX and limb presentation | Required-Slice-1 | High | Content found under `RogueCharacterModel\Content\Vefects\Tentacles_VFX`; descriptor not found, so do not add guessed plugin name |
+
+## 3A. Current `.uproject` Enabled Plugins
+
+| Plugin Name | Reason / Status |
+|---|---|
+| `Paper2D` | Core 2D sprite/flipbook support |
+| `PaperZD` | Core 2D animation framework; verification pending Live Coding shutdown |
+| `Niagara` | PaperZD dependency and planned VFX support |
+| `EnhancedInput` | Input mapping and controller support |
+| `ActorModifier` | Enabled locally; not a core gameplay dependency yet |
+| `ActorModifierCore` | Enabled locally; not a core gameplay dependency yet |
+| `ActorPalette` | Enabled locally; editor/asset workflow candidate |
+| `GameplayBehaviors` | Enabled locally; not a first-slice dependency yet |
+| `TargetingSystem` | Enabled locally; possible future combat targeting support |
+| `SurfaceEffects` | Enabled locally; not a first-slice dependency yet |
+| `SQLiteSupport` | Enabled locally; not a first-slice dependency yet |
+| `Paper2DPlus` | Enabled locally; Paper2D helper plugin |
+| `DayNightSystem` | Enabled locally; likely not needed for first interior slice |
+| `Pasma_Engine_Neural_Hair_Dynamics` | Enabled locally; high-risk experimental runtime/editor plugin |
+| `LingotionThespeon` | Enabled locally; TTS/audio plugin, not a first-slice dependency |
+| `LocoHelperAI` | Enabled locally; editor helper plugin, not a runtime design dependency |
+| `AnimationWarping` | Enabled locally; likely relevant only for 3D/retarget experiments |
+| `UnrealMCPBridge` | Enabled locally; Unreal Editor TCP bridge for Codex/MCP tooling |
+
+### Unreal MCP Bridge
+
+Installed project plugin:
+
+```text
+F:\Nocturne Signal\2dunrealproject\Plugins\UnrealMCPBridge
+```
+
+Exact `.uproject` plugin name:
+
+```json
+{ "Name": "UnrealMCPBridge", "Enabled": true }
+```
+
+Editor bridge endpoint:
+
+```text
+127.0.0.1:30020
+```
+
+Local Codex MCP wrapper:
+
+```text
+C:\Users\Doc\.codex\external\ue5-mcp-bridge-mcp
+```
+
+Local Codex MCP command configured on this machine:
+
+```toml
+[mcp_servers.unreal-mcp-bridge]
+command = "uv"
+args = ["--directory", "C:\\Users\\Doc\\.codex\\external\\ue5-mcp-bridge-mcp", "run", "ue5_mcp_bridge_server.py"]
+```
+
+Notes:
+
+- The bridge is a UE editor plugin, not a standalone stdio MCP server, so Codex uses a small local wrapper that forwards MCP tool calls to the editor TCP bridge.
+- Unreal Editor must be restarted after enabling the plugin so it can compile/load and listen on port `30020`.
+- Codex must be restarted before the new `unreal-mcp-bridge` MCP server appears in the active tool list.
 
 ### Confirmed Listing Notes
 
@@ -63,6 +127,12 @@ Implication for Nocturne Signal:
 - Verify whether the hair dynamics component can be repurposed for limb/tentacle behavior before production reliance.
 
 #### Tentacles VFX
+
+Local status:
+
+- Content exists under `F:\Nocturne Signal\2dunrealproject\RogueCharacterModel\Content\Vefects\Tentacles_VFX`.
+- No `.uplugin` descriptor was found in the nested content folder, UE 5.7 Marketplace plugin folders, or VaultCache.
+- Treat this as local VFX/content intake until a plugin descriptor is found.
 
 Source listing notes:
 
@@ -165,13 +235,14 @@ Do not guess this value.
 
 | ID | Plugin | Risk | Severity | Mitigation | Status |
 |---|---|---|---|---|---|
-| PR-001 | PaperZD | UE 5.7 compatibility or packaging issue | Critical | Verify in Slice 0 before animation-heavy work | Open |
+| PR-001 | PaperZD | UE 5.7 compatibility or packaging issue | Critical | Verify in Slice 0 before animation-heavy work | In Progress |
 | PR-002 | Unknown FAB plugins | Local install works but repo/project portability fails | High | Reconcile `.uproject`; document each plugin | In Progress |
 | PR-003 | Asset-pack plugins | Content imports inflate repo or create broken references | Medium | Intake assets deliberately; do not dump all content | Open |
-| PR-004 | Pasma Engine: Neural Hair Dynamics | Runtime dynamics plugin may not expose APIs suitable for 2D tentacle grapple | High | Verify module/API in IDE; use adapter layer; keep core grapple portable | Open |
-| PR-005 | Tentacles VFX | VFX plugin may solve presentation but not gameplay collision/state | High | Treat as visual layer until runtime behavior is proven | Open |
-| PR-006 | Plugin identifier mismatch | Wrong `.uproject` plugin name will prevent project launch | Critical | Do not add guessed plugin IDs; copy exact identifier from local `.uplugin` | In Progress |
-| PR-007 | NNE dependency | Pasma may require a specific Unreal NNE plugin/module that is not enabled by default | High | Confirm exact NNE plugin identifier locally; enable only after verified | Open |
+| PR-004 | Pasma Engine: Neural Hair Dynamics | Runtime dynamics plugin may not expose APIs suitable for 2D tentacle grapple | High | Verify module/API in IDE; use adapter layer; keep core grapple portable | In Progress |
+| PR-005 | Tentacles VFX | Local content exists, but no plugin descriptor has been found and it may solve presentation but not gameplay collision/state | High | Treat as visual/content layer until runtime behavior is proven; do not add guessed `.uproject` plugin names | In Progress |
+| PR-006 | Plugin identifier mismatch | Wrong `.uproject` plugin name will prevent project launch | Critical | Do not add guessed plugin IDs; copy exact identifier from local `.uplugin` | In Progress; PaperZD and Pasma identifiers confirmed |
+| PR-007 | NNE dependency | Pasma requires `NNERuntimeORT` | High | Confirm compile/editor launch with Pasma enabled | In Progress |
+| PR-008 | Unreal MCP bridge not attached | Plugin is installed but Codex may not expose the MCP tools until host config/reload and editor restart | Medium | Enable `UnrealMCPBridge`, configure the local Codex wrapper, restart Codex, then launch the editor and verify `127.0.0.1:30020` is listening | Verified; MCP ping, project query, and Jacob asset queries pass against UE 5.7.4 |
 
 ---
 
@@ -220,4 +291,4 @@ UVestigeTentacleVisualAdapter
 
 ## 11. Next Action
 
-Open the local plugin folder or `.uproject` after enabling the two FAB plugins and record the exact plugin identifiers. Then update `NocturneSignal.uproject` with the correct plugin names.
+Close the active Unreal Live Coding/editor session, then rebuild `NocturneSignalEditor` to verify the current enabled plugin set, especially Pasma, Lingotion, Loco, Paper2DPlus, DayNightSystem, AnimationWarping, and UnrealMCPBridge. After the editor launches with UnrealMCPBridge enabled, restart Codex and verify the `unreal-mcp-bridge` MCP tools can ping the editor.
