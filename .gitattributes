@@ -1,0 +1,35 @@
+# Normalize text files
+* text=auto
+
+# Unreal binary assets
+*.uasset binary
+*.umap binary
+*.ubulk binary
+*.uexp binary
+*.locres binary
+*.locmeta binary
+
+# Common image/audio/source binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.psd binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.flac binary
+*.fbx binary
+*.blend binary
+*.zip binary
+
+# Unreal/C++ text files
+*.uproject text eol=lf
+*.uplugin text eol=lf
+*.cs text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.ini text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf

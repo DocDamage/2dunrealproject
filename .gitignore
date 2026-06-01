@@ -1,0 +1,49 @@
+# Unreal generated folders
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.vscode/.browse.VC.db*
+.vscode/ipch/
+
+# Unreal generated files
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
+*.code-workspace
+
+# Build outputs
+*.target
+*.modules
+*.pdb
+*.ilk
+*.obj
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Logs and crash reports
+*.log
+*.dmp
+CrashReportClient/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+__pycache__/
+*.py[cod]
+
+# Local-only notes/config
+Local/
+*.local
+.env
+.env.*

@@ -1,0 +1,613 @@
+{
+  "root_directory": "/Game/RealmArchitect/Art/Jacob",
+  "retargeted_directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+  "expected_skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+  "animation_count": 85,
+  "retargeted_animation_count": 83,
+  "counts_by_directory": {
+    "/Game/RealmArchitect/Art/Jacob": 2,
+    "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations": 21,
+    "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat": 11,
+    "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic": 25,
+    "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword": 26
+  },
+  "animations": {
+    "Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle": {
+      "path": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle.Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle",
+      "package": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle",
+      "directory": "/Game/RealmArchitect/Art/Jacob",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 6.933333396911621
+    },
+    "Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword": {
+      "path": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword.Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword",
+      "package": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword",
+      "directory": "/Game/RealmArchitect/Art/Jacob",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 4.133333206176758
+    },
+    "JacobUE4_Cross_Punch_Anim": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Cross_Punch_Anim.JacobUE4_Cross_Punch_Anim",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Cross_Punch_Anim",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.0
+    },
+    "JacobUE4_Dying__1__mixamo_com": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Dying__1__mixamo_com.JacobUE4_Dying__1__mixamo_com",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Dying__1__mixamo_com",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 4.5
+    },
+    "JacobUE4_Dying__2__mixamo_com": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Dying__2__mixamo_com.JacobUE4_Dying__2__mixamo_com",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Dying__2__mixamo_com",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 4.400000095367432
+    },
+    "JacobUE4_Dying_mixamo_com": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Dying_mixamo_com.JacobUE4_Dying_mixamo_com",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Dying_mixamo_com",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 5.766666889190674
+    },
+    "JacobUE4_Elbow_Punching": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Elbow_Punching.JacobUE4_Elbow_Punching",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Elbow_Punching",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.399999976158142
+    },
+    "JacobUE4_Hook_Punch": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Hook_Punch.JacobUE4_Hook_Punch",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Hook_Punch",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.1666667461395264
+    },
+    "JacobUE4_Impact_mixamo_com": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Impact_mixamo_com.JacobUE4_Impact_mixamo_com",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Impact_mixamo_com",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.2333333492279053
+    },
+    "JacobUE4_Punching": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching.JacobUE4_Punching",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.0
+    },
+    "JacobUE4_Punching__1_": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching__1_.JacobUE4_Punching__1_",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching__1_",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.8666666746139526
+    },
+    "JacobUE4_Punching__2_": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching__2_.JacobUE4_Punching__2_",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching__2_",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.2333333492279053
+    },
+    "JacobUE4_Punching__3_": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching__3_.JacobUE4_Punching__3_",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat/JacobUE4_Punching__3_",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Combat",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.0
+    },
+    "JacobRTG_MF_Unarmed_Jog_Bwd": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Bwd.JacobRTG_MF_Unarmed_Jog_Bwd",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Bwd",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Jog_Bwd_Left": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Bwd_Left.JacobRTG_MF_Unarmed_Jog_Bwd_Left",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Bwd_Left",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Jog_Bwd_Right": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Bwd_Right.JacobRTG_MF_Unarmed_Jog_Bwd_Right",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Bwd_Right",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Jog_Fwd": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd.JacobRTG_MF_Unarmed_Jog_Fwd",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.7666666507720947
+    },
+    "JacobRTG_MF_Unarmed_Jog_Fwd_Left": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd_Left.JacobRTG_MF_Unarmed_Jog_Fwd_Left",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd_Left",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.7666666507720947
+    },
+    "JacobRTG_MF_Unarmed_Jog_Fwd_Right": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd_Right.JacobRTG_MF_Unarmed_Jog_Fwd_Right",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd_Right",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.7666666507720947
+    },
+    "JacobRTG_MF_Unarmed_Jog_Left": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Left.JacobRTG_MF_Unarmed_Jog_Left",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Left",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5333333015441895
+    },
+    "JacobRTG_MF_Unarmed_Jog_Right": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Right.JacobRTG_MF_Unarmed_Jog_Right",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Right",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.7333333492279053
+    },
+    "JacobRTG_MF_Unarmed_Walk_Bwd": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Bwd.JacobRTG_MF_Unarmed_Walk_Bwd",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Bwd",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.133333444595337
+    },
+    "JacobRTG_MF_Unarmed_Walk_Bwd_Left": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Bwd_Left.JacobRTG_MF_Unarmed_Walk_Bwd_Left",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Bwd_Left",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.133333444595337
+    },
+    "JacobRTG_MF_Unarmed_Walk_Bwd_Right": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Bwd_Right.JacobRTG_MF_Unarmed_Walk_Bwd_Right",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Bwd_Right",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.133333444595337
+    },
+    "JacobRTG_MF_Unarmed_Walk_Fwd": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd.JacobRTG_MF_Unarmed_Walk_Fwd",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Walk_Fwd_Left": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd_Left.JacobRTG_MF_Unarmed_Walk_Fwd_Left",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd_Left",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Walk_Fwd_Right": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd_Right.JacobRTG_MF_Unarmed_Walk_Fwd_Right",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd_Right",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Walk_Left": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Left.JacobRTG_MF_Unarmed_Walk_Left",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Left",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5333333015441895
+    },
+    "JacobRTG_MF_Unarmed_Walk_Right": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Right.JacobRTG_MF_Unarmed_Walk_Right",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Right",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5333333015441895
+    },
+    "JacobRTG_MM_Fall_Loop": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Fall_Loop.JacobRTG_MM_Fall_Loop",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Fall_Loop",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 3.0
+    },
+    "JacobRTG_MM_Idle": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Idle.JacobRTG_MM_Idle",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Idle",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 7.566666603088379
+    },
+    "JacobRTG_MM_Jump": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Jump.JacobRTG_MM_Jump",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Jump",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.8666666746139526
+    },
+    "JacobRTG_MM_Land": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Land.JacobRTG_MM_Land",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Land",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.8666666746139526
+    },
+    "JacobRTG_MM_WallJump": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_WallJump.JacobRTG_MM_WallJump",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_WallJump",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.46666666865348816
+    },
+    "JacobVexa_AirDash_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_AirDash_Vexa.JacobVexa_AirDash_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_AirDash_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.5666666626930237
+    },
+    "JacobVexa_AirStomp_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_AirStomp_Vexa.JacobVexa_AirStomp_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_AirStomp_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobVexa_Appearance_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Appearance_Vexa.JacobVexa_Appearance_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Appearance_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.6666666269302368
+    },
+    "JacobVexa_Dash_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Dash_Vexa.JacobVexa_Dash_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Dash_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.5666666626930237
+    },
+    "JacobVexa_Death_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Death_Vexa.JacobVexa_Death_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Death_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.1666666269302368
+    },
+    "JacobVexa_GunShot01_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShot01_Vexa.JacobVexa_GunShot01_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShot01_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.5
+    },
+    "JacobVexa_GunShot02_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShot02_Vexa.JacobVexa_GunShot02_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShot02_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.3333333432674408
+    },
+    "JacobVexa_GunShot03_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShot03_Vexa.JacobVexa_GunShot03_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShot03_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.3333333432674408
+    },
+    "JacobVexa_GunShotComplete_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShotComplete_Vexa.JacobVexa_GunShotComplete_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_GunShotComplete_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.1666666269302368
+    },
+    "JacobVexa_HandsSpell_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_HandsSpell_Vexa.JacobVexa_HandsSpell_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_HandsSpell_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.0
+    },
+    "JacobVexa_Healing_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Healing_Vexa.JacobVexa_Healing_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Healing_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.0
+    },
+    "JacobVexa_IdleChill_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_IdleChill_Vexa.JacobVexa_IdleChill_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_IdleChill_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.6666667461395264
+    },
+    "JacobVexa_Idle_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Idle_Vexa.JacobVexa_Idle_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Idle_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.6666667461395264
+    },
+    "JacobVexa_Jump01_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Jump01_Vexa.JacobVexa_Jump01_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Jump01_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.30000001192092896
+    },
+    "JacobVexa_Jump02_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Jump02_Vexa.JacobVexa_Jump02_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Jump02_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.30000001192092896
+    },
+    "JacobVexa_Jump03_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Jump03_Vexa.JacobVexa_Jump03_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Jump03_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.4000000059604645
+    },
+    "JacobVexa_JumpComplete_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_JumpComplete_Vexa.JacobVexa_JumpComplete_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_JumpComplete_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.0
+    },
+    "JacobVexa_MagicWand_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_MagicWand_Vexa.JacobVexa_MagicWand_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_MagicWand_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 2.8333332538604736
+    },
+    "JacobVexa_RecivingHeavyDamage_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_RecivingHeavyDamage_Vexa.JacobVexa_RecivingHeavyDamage_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_RecivingHeavyDamage_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.8666666746139526
+    },
+    "JacobVexa_RecivingLightDamage_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_RecivingLightDamage_Vexa.JacobVexa_RecivingLightDamage_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_RecivingLightDamage_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.23333333432674408
+    },
+    "JacobVexa_SnappySpell_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SnappySpell_Vexa.JacobVexa_SnappySpell_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SnappySpell_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.5
+    },
+    "JacobVexa_Stomp_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Stomp_Vexa.JacobVexa_Stomp_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_Stomp_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.3333333730697632
+    },
+    "JacobVexa_SummonCreature_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SummonCreature_Vexa.JacobVexa_SummonCreature_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SummonCreature_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.8333333730697632
+    },
+    "JacobVexa_SwordAttack_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SwordAttack_Vexa.JacobVexa_SwordAttack_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SwordAttack_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.3333333730697632
+    },
+    "JacobVexa_SwordSlash_Vexa": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SwordSlash_Vexa.JacobVexa_SwordSlash_Vexa",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic/JacobVexa_SwordSlash_Vexa",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Magic",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.5
+    },
+    "JacobFire_A_NS_01": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_01.JacobFire_A_NS_01",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_01",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_02": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_02.JacobFire_A_NS_02",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_02",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_03": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_03.JacobFire_A_NS_03",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_03",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_04": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_04.JacobFire_A_NS_04",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_04",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_05": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_05.JacobFire_A_NS_05",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_05",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_06": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_06.JacobFire_A_NS_06",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_06",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_07": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_07.JacobFire_A_NS_07",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_07",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_08": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_08.JacobFire_A_NS_08",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_08",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_09": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_09.JacobFire_A_NS_09",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_09",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_10": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_10.JacobFire_A_NS_10",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_10",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_11": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_11.JacobFire_A_NS_11",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_11",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_12": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_12.JacobFire_A_NS_12",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_12",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_13": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_13.JacobFire_A_NS_13",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_13",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_14": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_14.JacobFire_A_NS_14",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_14",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_15": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_15.JacobFire_A_NS_15",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_15",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_16": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_16.JacobFire_A_NS_16",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_16",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_17": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_17.JacobFire_A_NS_17",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_17",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_18": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_18.JacobFire_A_NS_18",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_18",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_19": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_19.JacobFire_A_NS_19",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_19",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_20": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_20.JacobFire_A_NS_20",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_20",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_21": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_21.JacobFire_A_NS_21",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_21",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_22": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_22.JacobFire_A_NS_22",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_22",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_23": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_23.JacobFire_A_NS_23",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_23",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_24": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_24.JacobFire_A_NS_24",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_24",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_25": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_25.JacobFire_A_NS_25",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_25",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobFire_A_NS_26": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_26.JacobFire_A_NS_26",
+      "package": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword/JacobFire_A_NS_26",
+      "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/Sword",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    }
+  },
+  "failures": [],
+  "result": "passed"
+}

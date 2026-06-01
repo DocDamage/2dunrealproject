@@ -1,0 +1,1881 @@
+{
+  "total_animation_assets": 248,
+  "counts_by_class": {
+    "AnimBlueprint": 16,
+    "AnimSequence": 222,
+    "BlendSpace": 1,
+    "BlendSpace1D": 9
+  },
+  "counts_by_root": {
+    "/Game/VelocityReflectLaunchSystemUE5": 46,
+    "/Game/DeformableSnowSystem": 44,
+    "/Game/Free_Spells": 44,
+    "/Game/Vefects": 33,
+    "/Game/FIRETRAILOFTHESWORD": 26,
+    "/Game/EasyCheckpointSystem": 23,
+    "/Game/RealmArchitect": 13,
+    "/Game/Mannequin": 10,
+    "/Game/A_Surface_Footstep": 9
+  },
+  "examples_by_root": {
+    "/Game/A_Surface_Footstep": [
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonIdle.ThirdPersonIdle",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_End.ThirdPersonJump_End",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_Loop.ThirdPersonJump_Loop",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_Start.ThirdPersonJump_Start",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonRun.ThirdPersonRun",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_IdleRun_2D.ThirdPerson_IdleRun_2D",
+      "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_Jump.ThirdPerson_Jump"
+    ],
+    "/Game/DeformableSnowSystem": [
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.BS_MM_WalkRun",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.MM_Fall_Loop",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Idle.MM_Idle",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Jump.MM_Jump",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Land.MM_Land",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Run_Fwd.MM_Run_Fwd",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd.MM_Walk_Fwd",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace.MM_Walk_InPlace",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun.BS_MF_Unarmed_WalkRun",
+      "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Idle.MF_Idle"
+    ],
+    "/Game/EasyCheckpointSystem": [
+      "/Game/EasyCheckpointSystem/Anims/ABP_Manny_EasyCheckpointSystem.ABP_Manny_EasyCheckpointSystem",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/BS_Idle_Walk_Run.BS_Idle_Walk_Run",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/MM_Idle.MM_Idle",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd.MF_Unarmed_Jog_Bwd",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Left.MF_Unarmed_Jog_Bwd_Left",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Right.MF_Unarmed_Jog_Bwd_Right",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.MF_Unarmed_Jog_Fwd",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Left.MF_Unarmed_Jog_Fwd_Left",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Right.MF_Unarmed_Jog_Fwd_Right",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Left.MF_Unarmed_Jog_Left",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Right.MF_Unarmed_Jog_Right",
+      "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop.MM_Fall_Loop"
+    ],
+    "/Game/FIRETRAILOFTHESWORD": [
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_01.A_NS_01",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_02.A_NS_02",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_03.A_NS_03",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_04.A_NS_04",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_05.A_NS_05",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_06.A_NS_06",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_07.A_NS_07",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_08.A_NS_08",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_09.A_NS_09",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_10.A_NS_10",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_11.A_NS_11",
+      "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_12.A_NS_12"
+    ],
+    "/Game/Free_Spells": [
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.BS_MM_WalkRun",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.MM_Fall_Loop",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Idle.MM_Idle",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Jump.MM_Jump",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Land.MM_Land",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Run_Fwd.MM_Run_Fwd",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd.MM_Walk_Fwd",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace.MM_Walk_InPlace",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun.BS_MF_Unarmed_WalkRun",
+      "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Idle.MF_Idle"
+    ],
+    "/Game/Mannequin": [
+      "/Game/Mannequin/Animations/GotHitAnimation.GotHitAnimation",
+      "/Game/Mannequin/Animations/ThirdPersonIdle.ThirdPersonIdle",
+      "/Game/Mannequin/Animations/ThirdPersonJump_End.ThirdPersonJump_End",
+      "/Game/Mannequin/Animations/ThirdPersonJump_Loop.ThirdPersonJump_Loop",
+      "/Game/Mannequin/Animations/ThirdPersonJump_Start.ThirdPersonJump_Start",
+      "/Game/Mannequin/Animations/ThirdPersonRun.ThirdPersonRun",
+      "/Game/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk",
+      "/Game/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP",
+      "/Game/Mannequin/Animations/ThirdPerson_IdleRun_2D.ThirdPerson_IdleRun_2D",
+      "/Game/Mannequin/Animations/ThirdPerson_Jump.ThirdPerson_Jump"
+    ],
+    "/Game/RealmArchitect": [
+      "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle.Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Cross_Punch_Anim.Cross_Punch_Anim",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying_mixamo_com.Dying_mixamo_com",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying__1__mixamo_com.Dying__1__mixamo_com",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying__2__mixamo_com.Dying__2__mixamo_com",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Elbow_Punching.Elbow_Punching",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Hook_Punch.Hook_Punch",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Impact_mixamo_com.Impact_mixamo_com",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching.Punching",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__1_.Punching__1_",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__2_.Punching__2_",
+      "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__3_.Punching__3_"
+    ],
+    "/Game/Vefects": [
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/AirDash_Vexa.AirDash_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/AirStomp_Vexa.AirStomp_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Appearance_Vexa.Appearance_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Dash_Vexa.Dash_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Death_Vexa.Death_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot01_Vexa.GunShot01_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot02_Vexa.GunShot02_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot03_Vexa.GunShot03_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShotComplete_Vexa.GunShotComplete_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/HandsSpell_Vexa.HandsSpell_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Healing_Vexa.Healing_Vexa",
+      "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/IdleChill_Vexa.IdleChill_Vexa"
+    ],
+    "/Game/VelocityReflectLaunchSystemUE5": [
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.BS_MM_WalkRun",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.MM_Fall_Loop",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Idle.MM_Idle",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Jump.MM_Jump",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Land.MM_Land",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Run_Fwd.MM_Run_Fwd",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_T_Pose.MM_T_Pose",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd.MM_Walk_Fwd",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace.MM_Walk_InPlace",
+      "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun.BS_MF_Unarmed_WalkRun"
+    ]
+  },
+  "assets": [
+    {
+      "name": "ThirdPersonIdle",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonIdle.ThirdPersonIdle",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonIdle",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPersonJump_End",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_End.ThirdPersonJump_End",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_End",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPersonJump_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_Loop.ThirdPersonJump_Loop",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_Loop",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPersonJump_Start",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_Start.ThirdPersonJump_Start",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonJump_Start",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPersonRun",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonRun.ThirdPersonRun",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonRun",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPersonWalk",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPersonWalk",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPerson_AnimBP",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_AnimBP",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPerson_IdleRun_2D",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_IdleRun_2D.ThirdPerson_IdleRun_2D",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_IdleRun_2D",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ThirdPerson_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_Jump.ThirdPerson_Jump",
+      "package_name": "/Game/A_Surface_Footstep/Mannequin/Animations/ThirdPerson_Jump",
+      "root": "/Game/A_Surface_Footstep"
+    },
+    {
+      "name": "ABP_Manny",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/ABP_Manny",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "ABP_Quinn",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/ABP_Quinn",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "BS_MM_WalkRun",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.BS_MM_WalkRun",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Fall_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.MM_Fall_Loop",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Fall_Loop",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Idle.MM_Idle",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Idle",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Jump.MM_Jump",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Jump",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Land",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Land.MM_Land",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Land",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Run_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Run_Fwd.MM_Run_Fwd",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Run_Fwd",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd.MM_Walk_Fwd",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MM_Walk_InPlace",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace.MM_Walk_InPlace",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "BS_MF_Unarmed_WalkRun",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun.BS_MF_Unarmed_WalkRun",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MF_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Idle.MF_Idle",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Idle",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MF_Run_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Run_Fwd.MF_Run_Fwd",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Run_Fwd",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "MF_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Walk_Fwd.MF_Walk_Fwd",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Animations/Quinn/MF_Walk_Fwd",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "ABP_Manny_PostProcess",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/ABP_Manny_PostProcess.ABP_Manny_PostProcess",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/ABP_Manny_PostProcess",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "ABP_Quinn_PostProcess",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/ABP_Quinn_PostProcess.ABP_Quinn_PostProcess",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/ABP_Quinn_PostProcess",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_calf_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_l_anim.Manny_calf_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_calf_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_r_anim.Manny_calf_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_clavicle_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_l_anim.Manny_clavicle_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_clavicle_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_r_anim.Manny_clavicle_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_foot_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_l_anim.Manny_foot_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_foot_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_r_anim.Manny_foot_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_hand_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_l_anim.Manny_hand_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_hand_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_r_anim.Manny_hand_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_lowerarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_l_anim.Manny_lowerarm_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_lowerarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_r_anim.Manny_lowerarm_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_thigh_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_l_anim.Manny_thigh_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_thigh_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_r_anim.Manny_thigh_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_upperarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_l_anim.Manny_upperarm_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Manny_upperarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_r_anim.Manny_upperarm_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_calf_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_l_anim.Quinn_calf_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_calf_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_r_anim.Quinn_calf_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_clavicle_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_l_anim.Quinn_clavicle_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_clavicle_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_r_anim.Quinn_clavicle_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_foot_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_l_anim.Quinn_foot_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_foot_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_r_anim.Quinn_foot_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_hand_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_l_anim.Quinn_hand_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_hand_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_r_anim.Quinn_hand_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_lowerarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_l_anim.Quinn_lowerarm_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_lowerarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_r_anim.Quinn_lowerarm_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_thigh_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_l_anim.Quinn_thigh_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_thigh_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_r_anim.Quinn_thigh_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_upperarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_l_anim.Quinn_upperarm_l_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_l_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "Quinn_upperarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_r_anim.Quinn_upperarm_r_anim",
+      "package_name": "/Game/DeformableSnowSystem/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_r_anim",
+      "root": "/Game/DeformableSnowSystem"
+    },
+    {
+      "name": "ABP_Manny_EasyCheckpointSystem",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/EasyCheckpointSystem/Anims/ABP_Manny_EasyCheckpointSystem.ABP_Manny_EasyCheckpointSystem",
+      "package_name": "/Game/EasyCheckpointSystem/Anims/ABP_Manny_EasyCheckpointSystem",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "BS_Idle_Walk_Run",
+      "class": "BlendSpace",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/BS_Idle_Walk_Run.BS_Idle_Walk_Run",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/BS_Idle_Walk_Run",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Bwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd.MF_Unarmed_Jog_Bwd",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Bwd_Left",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Left.MF_Unarmed_Jog_Bwd_Left",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Left",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Bwd_Right",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Right.MF_Unarmed_Jog_Bwd_Right",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Right",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.MF_Unarmed_Jog_Fwd",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Fwd_Left",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Left.MF_Unarmed_Jog_Fwd_Left",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Left",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Fwd_Right",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Right.MF_Unarmed_Jog_Fwd_Right",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Right",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Left",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Left.MF_Unarmed_Jog_Left",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Left",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Jog_Right",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Right.MF_Unarmed_Jog_Right",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Right",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MM_Fall_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop.MM_Fall_Loop",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MM_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Jump.MM_Jump",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Jump",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MM_Land",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Land.MM_Land",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_Land",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MM_WallJump",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_WallJump.MM_WallJump",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Jump/MM_WallJump",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MM_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/MM_Idle.MM_Idle",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/MM_Idle",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Bwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd.MF_Unarmed_Walk_Bwd",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Bwd_Left",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Left.MF_Unarmed_Walk_Bwd_Left",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Left",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Bwd_Right",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Right.MF_Unarmed_Walk_Bwd_Right",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Right",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd.MF_Unarmed_Walk_Fwd",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Fwd_Left",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Left.MF_Unarmed_Walk_Fwd_Left",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Left",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Fwd_Right",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Right.MF_Unarmed_Walk_Fwd_Right",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Right",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Left",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Left.MF_Unarmed_Walk_Left",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Left",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "MF_Unarmed_Walk_Right",
+      "class": "AnimSequence",
+      "object_path": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Right.MF_Unarmed_Walk_Right",
+      "package_name": "/Game/EasyCheckpointSystem/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Right",
+      "root": "/Game/EasyCheckpointSystem"
+    },
+    {
+      "name": "A_NS_01",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_01.A_NS_01",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_01",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_02",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_02.A_NS_02",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_02",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_03",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_03.A_NS_03",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_03",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_04",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_04.A_NS_04",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_04",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_05",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_05.A_NS_05",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_05",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_06",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_06.A_NS_06",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_06",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_07",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_07.A_NS_07",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_07",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_08",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_08.A_NS_08",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_08",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_09",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_09.A_NS_09",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_09",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_10",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_10.A_NS_10",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_10",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_11",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_11.A_NS_11",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_11",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_12",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_12.A_NS_12",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_12",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_13",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_13.A_NS_13",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_13",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_14",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_14.A_NS_14",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_14",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_15",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_15.A_NS_15",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_15",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_16",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_16.A_NS_16",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_16",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_17",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_17.A_NS_17",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_17",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_18",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_18.A_NS_18",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_18",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_19",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_19.A_NS_19",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_19",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_20",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_20.A_NS_20",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_20",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_21",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_21.A_NS_21",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_21",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_22",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_22.A_NS_22",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_22",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_23",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_23.A_NS_23",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_23",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_24",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_24.A_NS_24",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_24",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_25",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_25.A_NS_25",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_25",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "A_NS_26",
+      "class": "AnimSequence",
+      "object_path": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_26.A_NS_26",
+      "package_name": "/Game/FIRETRAILOFTHESWORD/Demo/Anims/A_NS_26",
+      "root": "/Game/FIRETRAILOFTHESWORD"
+    },
+    {
+      "name": "ABP_Manny",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/ABP_Manny",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "ABP_Quinn",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/ABP_Quinn",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "BS_MM_WalkRun",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.BS_MM_WalkRun",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Fall_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.MM_Fall_Loop",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Fall_Loop",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Idle.MM_Idle",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Idle",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Jump.MM_Jump",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Jump",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Land",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Land.MM_Land",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Land",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Run_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Run_Fwd.MM_Run_Fwd",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Run_Fwd",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd.MM_Walk_Fwd",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MM_Walk_InPlace",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace.MM_Walk_InPlace",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "BS_MF_Unarmed_WalkRun",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun.BS_MF_Unarmed_WalkRun",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MF_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Idle.MF_Idle",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Idle",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MF_Run_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Run_Fwd.MF_Run_Fwd",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Run_Fwd",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "MF_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Walk_Fwd.MF_Walk_Fwd",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Animations/Quinn/MF_Walk_Fwd",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "ABP_Manny_PostProcess",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/ABP_Manny_PostProcess.ABP_Manny_PostProcess",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/ABP_Manny_PostProcess",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "ABP_Quinn_PostProcess",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/ABP_Quinn_PostProcess.ABP_Quinn_PostProcess",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/ABP_Quinn_PostProcess",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_calf_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_l_anim.Manny_calf_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_calf_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_r_anim.Manny_calf_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_clavicle_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_l_anim.Manny_clavicle_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_clavicle_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_r_anim.Manny_clavicle_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_foot_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_l_anim.Manny_foot_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_foot_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_r_anim.Manny_foot_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_hand_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_l_anim.Manny_hand_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_hand_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_r_anim.Manny_hand_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_lowerarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_l_anim.Manny_lowerarm_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_lowerarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_r_anim.Manny_lowerarm_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_thigh_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_l_anim.Manny_thigh_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_thigh_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_r_anim.Manny_thigh_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_upperarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_l_anim.Manny_upperarm_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Manny_upperarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_r_anim.Manny_upperarm_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_calf_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_l_anim.Quinn_calf_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_calf_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_r_anim.Quinn_calf_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_clavicle_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_l_anim.Quinn_clavicle_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_clavicle_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_r_anim.Quinn_clavicle_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_foot_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_l_anim.Quinn_foot_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_foot_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_r_anim.Quinn_foot_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_hand_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_l_anim.Quinn_hand_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_hand_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_r_anim.Quinn_hand_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_lowerarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_l_anim.Quinn_lowerarm_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_lowerarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_r_anim.Quinn_lowerarm_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_thigh_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_l_anim.Quinn_thigh_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_thigh_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_r_anim.Quinn_thigh_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_upperarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_l_anim.Quinn_upperarm_l_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_l_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "Quinn_upperarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_r_anim.Quinn_upperarm_r_anim",
+      "package_name": "/Game/Free_Spells/Demo/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_r_anim",
+      "root": "/Game/Free_Spells"
+    },
+    {
+      "name": "GotHitAnimation",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/GotHitAnimation.GotHitAnimation",
+      "package_name": "/Game/Mannequin/Animations/GotHitAnimation",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPersonIdle",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPersonIdle.ThirdPersonIdle",
+      "package_name": "/Game/Mannequin/Animations/ThirdPersonIdle",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPersonJump_End",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPersonJump_End.ThirdPersonJump_End",
+      "package_name": "/Game/Mannequin/Animations/ThirdPersonJump_End",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPersonJump_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPersonJump_Loop.ThirdPersonJump_Loop",
+      "package_name": "/Game/Mannequin/Animations/ThirdPersonJump_Loop",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPersonJump_Start",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPersonJump_Start.ThirdPersonJump_Start",
+      "package_name": "/Game/Mannequin/Animations/ThirdPersonJump_Start",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPersonRun",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPersonRun.ThirdPersonRun",
+      "package_name": "/Game/Mannequin/Animations/ThirdPersonRun",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPersonWalk",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk",
+      "package_name": "/Game/Mannequin/Animations/ThirdPersonWalk",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPerson_AnimBP",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP",
+      "package_name": "/Game/Mannequin/Animations/ThirdPerson_AnimBP",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPerson_IdleRun_2D",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/Mannequin/Animations/ThirdPerson_IdleRun_2D.ThirdPerson_IdleRun_2D",
+      "package_name": "/Game/Mannequin/Animations/ThirdPerson_IdleRun_2D",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "ThirdPerson_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/Mannequin/Animations/ThirdPerson_Jump.ThirdPerson_Jump",
+      "package_name": "/Game/Mannequin/Animations/ThirdPerson_Jump",
+      "root": "/Game/Mannequin"
+    },
+    {
+      "name": "Cross_Punch_Anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Cross_Punch_Anim.Cross_Punch_Anim",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Cross_Punch_Anim",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Dying__1__mixamo_com",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying__1__mixamo_com.Dying__1__mixamo_com",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying__1__mixamo_com",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Dying__2__mixamo_com",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying__2__mixamo_com.Dying__2__mixamo_com",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying__2__mixamo_com",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Dying_mixamo_com",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying_mixamo_com.Dying_mixamo_com",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Dying_mixamo_com",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Elbow_Punching",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Elbow_Punching.Elbow_Punching",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Elbow_Punching",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Hook_Punch",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Hook_Punch.Hook_Punch",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Hook_Punch",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Impact_mixamo_com",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Impact_mixamo_com.Impact_mixamo_com",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Impact_mixamo_com",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Punching",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching.Punching",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Punching__1_",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__1_.Punching__1_",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__1_",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Punching__2_",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__2_.Punching__2_",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__2_",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Punching__3_",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__3_.Punching__3_",
+      "package_name": "/Game/RealmArchitect/Art/InstalledPacks/FightingAnimations/Skeletal/Punching__3_",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle.Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle",
+      "package_name": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_Idle",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword",
+      "class": "AnimSequence",
+      "object_path": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword.Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword",
+      "package_name": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Anim_Armature_Jacob_ReadySword",
+      "root": "/Game/RealmArchitect"
+    },
+    {
+      "name": "AirDash_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/AirDash_Vexa.AirDash_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/AirDash_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "AirStomp_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/AirStomp_Vexa.AirStomp_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/AirStomp_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Appearance_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Appearance_Vexa.Appearance_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Appearance_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Dash_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Dash_Vexa.Dash_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Dash_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Death_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Death_Vexa.Death_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Death_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "GunShot01_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot01_Vexa.GunShot01_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot01_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "GunShot02_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot02_Vexa.GunShot02_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot02_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "GunShot03_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot03_Vexa.GunShot03_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShot03_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "GunShotComplete_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShotComplete_Vexa.GunShotComplete_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/GunShotComplete_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "HandsSpell_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/HandsSpell_Vexa.HandsSpell_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/HandsSpell_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Healing_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Healing_Vexa.Healing_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Healing_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "IdleChill_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/IdleChill_Vexa.IdleChill_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/IdleChill_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Idle_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Idle_Vexa.Idle_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Idle_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Jump01_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Jump01_Vexa.Jump01_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Jump01_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Jump02_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Jump02_Vexa.Jump02_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Jump02_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Jump03_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Jump03_Vexa.Jump03_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Jump03_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "JumpComplete_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/JumpComplete_Vexa.JumpComplete_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/JumpComplete_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "MagicWand_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/MagicWand_Vexa.MagicWand_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/MagicWand_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "RecivingHeavyDamage_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/RecivingHeavyDamage_Vexa.RecivingHeavyDamage_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/RecivingHeavyDamage_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "RecivingLightDamage_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/RecivingLightDamage_Vexa.RecivingLightDamage_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/RecivingLightDamage_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "SnappySpell_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SnappySpell_Vexa.SnappySpell_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SnappySpell_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Stomp_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Stomp_Vexa.Stomp_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/Stomp_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "SummonCreature_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SummonCreature_Vexa.SummonCreature_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SummonCreature_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "SwordAttack_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SwordAttack_Vexa.SwordAttack_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SwordAttack_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "SwordSlash_Vexa",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SwordSlash_Vexa.SwordSlash_Vexa",
+      "package_name": "/Game/Vefects/Easy_Impact_Frames/Demo/Stylized_Female_Character_Vexa/Animations/SwordSlash_Vexa",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPersonIdle",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonIdle.ThirdPersonIdle",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonIdle",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPersonJump_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonJump_Loop.ThirdPersonJump_Loop",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonJump_Loop",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPersonJump_Start",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonJump_Start.ThirdPersonJump_Start",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonJump_Start",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPersonRun",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonRun.ThirdPersonRun",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonRun",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPersonWalk",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPersonWalk",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPerson_AnimBP",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPerson_AnimBP.ThirdPerson_AnimBP",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPerson_AnimBP",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPerson_IdleRun_2D",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPerson_IdleRun_2D.ThirdPerson_IdleRun_2D",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPerson_IdleRun_2D",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "ThirdPerson_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPerson_Jump.ThirdPerson_Jump",
+      "package_name": "/Game/Vefects/Tentacles_VFX/Demo/Other/Mannequin/Animations/ThirdPerson_Jump",
+      "root": "/Game/Vefects"
+    },
+    {
+      "name": "Jog_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequin_UE4/Animations/Jog_Fwd.Jog_Fwd",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequin_UE4/Animations/Jog_Fwd",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "ABP_Manny",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/ABP_Manny.ABP_Manny",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/ABP_Manny",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "ABP_Quinn",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/ABP_Quinn",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "BS_MM_WalkRun",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun.BS_MM_WalkRun",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/BS_MM_WalkRun",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Fall_Loop",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Fall_Loop.MM_Fall_Loop",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Fall_Loop",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Idle.MM_Idle",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Idle",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Jump",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Jump.MM_Jump",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Jump",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Land",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Land.MM_Land",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Land",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Run_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Run_Fwd.MM_Run_Fwd",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Run_Fwd",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_T_Pose",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_T_Pose.MM_T_Pose",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_T_Pose",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd.MM_Walk_Fwd",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Walk_Fwd",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MM_Walk_InPlace",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace.MM_Walk_InPlace",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Manny/MM_Walk_InPlace",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "BS_MF_Unarmed_WalkRun",
+      "class": "BlendSpace1D",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun.BS_MF_Unarmed_WalkRun",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/BS_MF_Unarmed_WalkRun",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MF_Idle",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/MF_Idle.MF_Idle",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/MF_Idle",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MF_Run_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/MF_Run_Fwd.MF_Run_Fwd",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/MF_Run_Fwd",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "MF_Walk_Fwd",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/MF_Walk_Fwd.MF_Walk_Fwd",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Animations/Quinn/MF_Walk_Fwd",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "ABP_Manny_PostProcess",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/ABP_Manny_PostProcess.ABP_Manny_PostProcess",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/ABP_Manny_PostProcess",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "ABP_Quinn_PostProcess",
+      "class": "AnimBlueprint",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/ABP_Quinn_PostProcess.ABP_Quinn_PostProcess",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/ABP_Quinn_PostProcess",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_calf_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_l_anim.Manny_calf_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_calf_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_r_anim.Manny_calf_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_calf_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_clavicle_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_l_anim.Manny_clavicle_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_clavicle_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_r_anim.Manny_clavicle_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_clavicle_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_foot_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_l_anim.Manny_foot_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_foot_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_r_anim.Manny_foot_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_foot_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_hand_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_l_anim.Manny_hand_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_hand_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_r_anim.Manny_hand_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_hand_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_lowerarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_l_anim.Manny_lowerarm_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_lowerarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_r_anim.Manny_lowerarm_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_lowerarm_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_thigh_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_l_anim.Manny_thigh_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_thigh_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_r_anim.Manny_thigh_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_thigh_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_upperarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_l_anim.Manny_upperarm_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Manny_upperarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_r_anim.Manny_upperarm_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Manny/Manny_upperarm_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_calf_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_l_anim.Quinn_calf_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_calf_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_r_anim.Quinn_calf_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_calf_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_clavicle_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_l_anim.Quinn_clavicle_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_clavicle_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_r_anim.Quinn_clavicle_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_clavicle_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_foot_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_l_anim.Quinn_foot_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_foot_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_r_anim.Quinn_foot_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_foot_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_hand_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_l_anim.Quinn_hand_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_hand_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_r_anim.Quinn_hand_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_hand_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_lowerarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_l_anim.Quinn_lowerarm_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_lowerarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_r_anim.Quinn_lowerarm_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_lowerarm_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_thigh_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_l_anim.Quinn_thigh_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_thigh_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_r_anim.Quinn_thigh_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_thigh_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_upperarm_l_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_l_anim.Quinn_upperarm_l_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_l_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    },
+    {
+      "name": "Quinn_upperarm_r_anim",
+      "class": "AnimSequence",
+      "object_path": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_r_anim.Quinn_upperarm_r_anim",
+      "package_name": "/Game/VelocityReflectLaunchSystemUE5/DEMO/Characters/Mannequins/Rigs/Poses/Quinn/Quinn_upperarm_r_anim",
+      "root": "/Game/VelocityReflectLaunchSystemUE5"
+    }
+  ]
+}

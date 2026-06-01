@@ -1,0 +1,50 @@
+{
+  "directory": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations",
+  "expected_skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+  "animations": {
+    "JacobRTG_MM_Idle": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Idle.JacobRTG_MM_Idle",
+      "loaded": true,
+      "class": "AnimSequence",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 7.566666603088379
+    },
+    "JacobRTG_MF_Unarmed_Walk_Fwd": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Walk_Fwd.JacobRTG_MF_Unarmed_Walk_Fwd",
+      "loaded": true,
+      "class": "AnimSequence",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.5
+    },
+    "JacobRTG_MF_Unarmed_Jog_Fwd": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MF_Unarmed_Jog_Fwd.JacobRTG_MF_Unarmed_Jog_Fwd",
+      "loaded": true,
+      "class": "AnimSequence",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 1.7666666507720947
+    },
+    "JacobRTG_MM_Jump": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Jump.JacobRTG_MM_Jump",
+      "loaded": true,
+      "class": "AnimSequence",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.8666666746139526
+    },
+    "JacobRTG_MM_Fall_Loop": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Fall_Loop.JacobRTG_MM_Fall_Loop",
+      "loaded": true,
+      "class": "AnimSequence",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 3.0
+    },
+    "JacobRTG_MM_Land": {
+      "path": "/Game/RealmArchitect/Art/Jacob/RetargetedAnimations/JacobRTG_MM_Land.JacobRTG_MM_Land",
+      "loaded": true,
+      "class": "AnimSequence",
+      "skeleton": "/Game/RealmArchitect/Art/Jacob/Jacob_NocturneCharacterOnly_Skeleton.Jacob_NocturneCharacterOnly_Skeleton",
+      "play_length": 0.8666666746139526
+    }
+  },
+  "failures": [],
+  "result": "passed"
+}
