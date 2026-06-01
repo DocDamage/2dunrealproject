@@ -62,6 +62,18 @@ public:
 	virtual int64 GetDispatchedRequestCount() const override;
 
 private:
+	/** Idempotent early teardown used by module unload, engine pre-exit, and Python shutdown. */
+	void BeginBridgeShutdown(const TCHAR* Reason);
+
+	/** Engine pre-exit hook: stop MCP before PythonScriptPlugin finalizes Python. */
+	void OnPreExit();
+
+	/** Python shutdown hook: fallback guard if Python begins shutdown before module unload. */
+	void OnPythonShutdown();
+
+	/** Clears MCP Python modules/registries before UE's Python finalizer runs. */
+	void CleanupPythonState();
+
 	/**
 	 * Handler bag setup. Day 3 installs:
 	 *   - kind=ExecPython handler  → FMCPPythonEval::EvalExpression
@@ -79,5 +91,8 @@ private:
 	TArray<FString> RegisteredMethodNames;
 
 	FDelegateHandle OnEndFrameHandle;
+	FDelegateHandle OnPreExitHandle;
+	FDelegateHandle OnPythonShutdownHandle;
 	bool bStarted = false;
+	bool bShutdownStarted = false;
 };

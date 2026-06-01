@@ -18,6 +18,7 @@
 
 #include "Dom/JsonObject.h"
 #include "Dom/JsonValue.h"
+#include "IPythonScriptPlugin.h"
 #include "Misc/CoreDelegates.h"
 
 // LogMCP moved to UnrealMCPBridgeCore in Phase 5 module split (2026-05-22).
@@ -56,7 +57,15 @@ void FUnrealMCPBridgeModule::StartupModule()
 	// 4. Hook the OnEndFrame drain.
 	OnEndFrameHandle = FCoreDelegates::OnEndFrame.AddRaw(this, &FUnrealMCPBridgeModule::OnEndFrame);
 
-	// 5. Python sys.path bootstrap — fires immediately if Python is already up, else queues.
+	// 5. Hook early shutdown paths. ShutdownModule runs too late for PythonScriptPlugin's
+	// OnPreExit finalizer, so we stop sockets/handlers before Python begins finalization.
+	OnPreExitHandle = FCoreDelegates::OnPreExit.AddRaw(this, &FUnrealMCPBridgeModule::OnPreExit);
+	if (IPythonScriptPlugin* PythonPlugin = IPythonScriptPlugin::Get())
+	{
+		OnPythonShutdownHandle = PythonPlugin->OnPythonShutdown().AddRaw(this, &FUnrealMCPBridgeModule::OnPythonShutdown);
+	}
+
+	// 6. Python sys.path bootstrap — fires immediately if Python is already up, else queues.
 	FMCPPythonBootstrap::RegisterPythonInitCallback();
 
 	bStarted = true;
@@ -69,6 +78,34 @@ void FUnrealMCPBridgeModule::StartupModule()
 void FUnrealMCPBridgeModule::ShutdownModule()
 {
 	UE_LOG(LogMCP, Log, TEXT("MCP bridge module shutting down"));
+
+	BeginBridgeShutdown(TEXT("ShutdownModule"));
+
+	if (OnPreExitHandle.IsValid())
+	{
+		FCoreDelegates::OnPreExit.Remove(OnPreExitHandle);
+		OnPreExitHandle.Reset();
+	}
+
+	if (OnPythonShutdownHandle.IsValid())
+	{
+		if (IPythonScriptPlugin* PythonPlugin = IPythonScriptPlugin::Get())
+		{
+			PythonPlugin->OnPythonShutdown().Remove(OnPythonShutdownHandle);
+		}
+		OnPythonShutdownHandle.Reset();
+	}
+}
+
+void FUnrealMCPBridgeModule::BeginBridgeShutdown(const TCHAR* Reason)
+{
+	if (bShutdownStarted)
+	{
+		return;
+	}
+	bShutdownStarted = true;
+
+	UE_LOG(LogMCP, Log, TEXT("MCP bridge early shutdown (%s)"), Reason ? Reason : TEXT("unknown"));
 
 	if (OnEndFrameHandle.IsValid())
 	{
@@ -87,11 +124,50 @@ void FUnrealMCPBridgeModule::ShutdownModule()
 	// in-progress Python could corrupt the interpreter).
 	FMCPJobRegistry::Get().Shutdown();
 
+	CleanupPythonState();
+
 	// Detach log capture LAST so any teardown logs from Job registry / server get into the ring
 	// for the final flush (cosmetic — by now nobody can query log.tail anyway).
 	FMCPLogStream::Get().Detach();
 
 	bStarted = false;
+}
+
+void FUnrealMCPBridgeModule::OnPreExit()
+{
+	BeginBridgeShutdown(TEXT("OnPreExit"));
+}
+
+void FUnrealMCPBridgeModule::OnPythonShutdown()
+{
+	BeginBridgeShutdown(TEXT("OnPythonShutdown"));
+}
+
+void FUnrealMCPBridgeModule::CleanupPythonState()
+{
+	IPythonScriptPlugin* PythonPlugin = IPythonScriptPlugin::Get();
+	if (!PythonPlugin || !PythonPlugin->IsPythonInitialized())
+	{
+		return;
+	}
+
+	const FString CleanupScript =
+		TEXT("import gc, sys\n")
+		TEXT("try:\n")
+		TEXT("    import MCPTools.registry as _mcp_registry\n")
+		TEXT("    _mcp_registry.clear()\n")
+		TEXT("except Exception:\n")
+		TEXT("    pass\n")
+		TEXT("for _mcp_name in [n for n in list(sys.modules) if n == 'MCPTools' or n.startswith('MCPTools.')]:\n")
+		TEXT("    sys.modules.pop(_mcp_name, None)\n")
+		TEXT("gc.collect()\n")
+		TEXT("import unreal\n")
+		TEXT("unreal.log('[MCP] Python cleanup OK')\n");
+
+	if (!PythonPlugin->ExecPythonCommand(*CleanupScript))
+	{
+		UE_LOG(LogMCP, Warning, TEXT("MCP Python cleanup command failed during shutdown"));
+	}
 }
 
 bool FUnrealMCPBridgeModule::IsListening() const

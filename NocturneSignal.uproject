@@ -8,6 +8,11 @@
 			"Name": "NocturneSignal",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "NocturneSignalEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
@@ -75,7 +80,7 @@
 		},
 		{
 			"Name": "LingotionThespeon",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "LocoHelperAI",
@@ -87,6 +92,19 @@
 		},
 		{
 			"Name": "UnrealMCPBridge",
+			"Enabled": true
+		},
+		{
+			"Name": "TraversalMotionWarp",
+			"Enabled": true,
+			"MarketplaceURL": "https://www.fab.com/listings/REPLACE_WITH_YOUR_LISTING_ID"
+		},
+		{
+			"Name": "GVBlendByGameplayTag",
+			"Enabled": true
+		},
+		{
+			"Name": "InfCharacters",
 			"Enabled": true
 		}
 	]

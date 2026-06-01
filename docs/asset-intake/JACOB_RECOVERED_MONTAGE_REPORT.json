@@ -1,0 +1,472 @@
+{
+  "plan": [
+    {
+      "name": "AM_Jacob_FireTrail_Action01",
+      "category": "FireTrailOfTheSword",
+      "source_name": "JAC_Fire_A_NS_01",
+      "sections": [
+        "Default",
+        "AttackStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.18,
+        0.72
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_01.JAC_Fire_A_NS_01",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action01",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action01.AM_Jacob_FireTrail_Action01"
+    },
+    {
+      "name": "AM_Jacob_FireTrail_Action08",
+      "category": "FireTrailOfTheSword",
+      "source_name": "JAC_Fire_A_NS_08",
+      "sections": [
+        "Default",
+        "AttackStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.18,
+        0.72
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_08.JAC_Fire_A_NS_08",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action08",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action08.AM_Jacob_FireTrail_Action08"
+    },
+    {
+      "name": "AM_Jacob_FireTrail_Action16",
+      "category": "FireTrailOfTheSword",
+      "source_name": "JAC_Fire_A_NS_16",
+      "sections": [
+        "Default",
+        "AttackStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.18,
+        0.72
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_16.JAC_Fire_A_NS_16",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action16",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action16.AM_Jacob_FireTrail_Action16"
+    },
+    {
+      "name": "AM_Jacob_Fighting_CrossPunch",
+      "category": "FightingAnimations",
+      "source_name": "JAC_Fighting_Cross_Punch_Anim",
+      "sections": [
+        "Default",
+        "StrikeStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.16,
+        0.68
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Cross_Punch_Anim.JAC_Fighting_Cross_Punch_Anim",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_CrossPunch",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_CrossPunch.AM_Jacob_Fighting_CrossPunch"
+    },
+    {
+      "name": "AM_Jacob_Fighting_HookPunch",
+      "category": "FightingAnimations",
+      "source_name": "JAC_Fighting_Hook_Punch",
+      "sections": [
+        "Default",
+        "StrikeStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.16,
+        0.68
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Hook_Punch.JAC_Fighting_Hook_Punch",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_HookPunch",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_HookPunch.AM_Jacob_Fighting_HookPunch"
+    },
+    {
+      "name": "AM_Jacob_Fighting_ElbowPunch",
+      "category": "FightingAnimations",
+      "source_name": "JAC_Fighting_Elbow_Punching",
+      "sections": [
+        "Default",
+        "StrikeStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.16,
+        0.68
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Elbow_Punching.JAC_Fighting_Elbow_Punching",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_ElbowPunch",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_ElbowPunch.AM_Jacob_Fighting_ElbowPunch"
+    },
+    {
+      "name": "AM_Jacob_Fighting_Impact",
+      "category": "FightingAnimations",
+      "source_name": "JAC_Fighting_Impact_mixamo_com",
+      "sections": [
+        "Default",
+        "ReactStart",
+        "Recover"
+      ],
+      "section_fractions": [
+        0.0,
+        0.12,
+        0.66
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Impact_mixamo_com.JAC_Fighting_Impact_mixamo_com",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Impact",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Impact.AM_Jacob_Fighting_Impact"
+    },
+    {
+      "name": "AM_Jacob_Fighting_Death",
+      "category": "FightingAnimations",
+      "source_name": "JAC_Fighting_Dying_mixamo_com",
+      "sections": [
+        "Default",
+        "DeathStart",
+        "Settle"
+      ],
+      "section_fractions": [
+        0.0,
+        0.18,
+        0.82
+      ],
+      "asset": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying_mixamo_com.JAC_Fighting_Dying_mixamo_com",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Death",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Death.AM_Jacob_Fighting_Death"
+    }
+  ],
+  "montages": [
+    {
+      "name": "AM_Jacob_FireTrail_Action01",
+      "category": "FireTrailOfTheSword",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_01.JAC_Fire_A_NS_01",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action01",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action01.AM_Jacob_FireTrail_Action01",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 1.5,
+      "sections_expected": [
+        "Default",
+        "AttackStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.27,
+        1.08
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "AttackStart",
+          "next": "",
+          "time": 0.27
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 1.08
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_FireTrail_Action08",
+      "category": "FireTrailOfTheSword",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_08.JAC_Fire_A_NS_08",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action08",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action08.AM_Jacob_FireTrail_Action08",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 1.5,
+      "sections_expected": [
+        "Default",
+        "AttackStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.27,
+        1.08
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "AttackStart",
+          "next": "",
+          "time": 0.27
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 1.08
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_FireTrail_Action16",
+      "category": "FireTrailOfTheSword",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_16.JAC_Fire_A_NS_16",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action16",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action16.AM_Jacob_FireTrail_Action16",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 1.5,
+      "sections_expected": [
+        "Default",
+        "AttackStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.27,
+        1.08
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "AttackStart",
+          "next": "",
+          "time": 0.27
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 1.08
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_Fighting_CrossPunch",
+      "category": "FightingAnimations",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Cross_Punch_Anim.JAC_Fighting_Cross_Punch_Anim",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_CrossPunch",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_CrossPunch.AM_Jacob_Fighting_CrossPunch",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 2.0,
+      "sections_expected": [
+        "Default",
+        "StrikeStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.32,
+        1.36
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "StrikeStart",
+          "next": "",
+          "time": 0.32
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 1.36
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_Fighting_HookPunch",
+      "category": "FightingAnimations",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Hook_Punch.JAC_Fighting_Hook_Punch",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_HookPunch",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_HookPunch.AM_Jacob_Fighting_HookPunch",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 2.1666667461395264,
+      "sections_expected": [
+        "Default",
+        "StrikeStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.3467,
+        1.4733
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "StrikeStart",
+          "next": "",
+          "time": 0.3467
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 1.4733
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_Fighting_ElbowPunch",
+      "category": "FightingAnimations",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Elbow_Punching.JAC_Fighting_Elbow_Punching",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_ElbowPunch",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_ElbowPunch.AM_Jacob_Fighting_ElbowPunch",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 1.399999976158142,
+      "sections_expected": [
+        "Default",
+        "StrikeStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.224,
+        0.952
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "StrikeStart",
+          "next": "",
+          "time": 0.224
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 0.952
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_Fighting_Impact",
+      "category": "FightingAnimations",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Impact_mixamo_com.JAC_Fighting_Impact_mixamo_com",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Impact",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Impact.AM_Jacob_Fighting_Impact",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 1.2333333492279053,
+      "sections_expected": [
+        "Default",
+        "ReactStart",
+        "Recover"
+      ],
+      "section_times_expected": [
+        0.0,
+        0.148,
+        0.814
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "ReactStart",
+          "next": "",
+          "time": 0.148
+        },
+        {
+          "index": 2,
+          "name": "Recover",
+          "next": "",
+          "time": 0.814
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "name": "AM_Jacob_Fighting_Death",
+      "category": "FightingAnimations",
+      "source_animation": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying_mixamo_com.JAC_Fighting_Dying_mixamo_com",
+      "destination": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Death",
+      "object_path": "/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Death.AM_Jacob_Fighting_Death",
+      "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+      "play_length": 5.766666889190674,
+      "sections_expected": [
+        "Default",
+        "DeathStart",
+        "Settle"
+      ],
+      "section_times_expected": [
+        0.0,
+        1.038,
+        4.7287
+      ],
+      "sections": [
+        {
+          "index": 0,
+          "name": "Default",
+          "next": "",
+          "time": 0.0
+        },
+        {
+          "index": 1,
+          "name": "DeathStart",
+          "next": "",
+          "time": 1.038
+        },
+        {
+          "index": 2,
+          "name": "Settle",
+          "next": "",
+          "time": 4.7287
+        }
+      ],
+      "result": "passed"
+    }
+  ],
+  "total_montages": 8,
+  "result": "passed"
+}

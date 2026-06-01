@@ -57,17 +57,18 @@ Grapple target:
 
 | ID | Deliverable | Status | Verification |
 |---|---|---|---|
-| S1-D001 | Unreal player character scaffold | Open | Player actor spawns in test map |
-| S1-D002 | SOTN-style run movement | Open | Run acceleration/deceleration feels grounded |
-| S1-D003 | Jump/fall/landing baseline | Open | Jump arc readable; landing event fires |
-| S1-D004 | Placeholder player art support | Open | Character works without final Veyra art |
-| S1-D005 | `VestigeLimbComponent` scaffold | Open | Component attaches to player and exposes state |
-| S1-D006 | `GrappleAnchor` actor | Open | Anchor can be placed in test room |
-| S1-D007 | Pull-to-Point grapple | Open | Player travels to selected architecture node |
-| S1-D008 | Grapple targeting | Open | Nearest/valid anchor can be detected in range |
-| S1-D009 | Grapple debug display | Open | Shows state, anchor, distance, velocity |
+| S1-D001 | Unreal player character scaffold | In Progress | Player actor spawns in test map |
+| S1-D002 | SOTN-style run movement | In Progress | Run acceleration/deceleration feels grounded |
+| S1-D003 | Jump/fall/landing baseline | In Progress | Jump arc readable; landing event fires |
+| S1-D004 | Placeholder player art support | In Progress | Character works without final Veyra art |
+| S1-D005 | `VestigeLimbComponent` scaffold | In Progress | Component attaches to player and exposes state |
+| S1-D006 | `GrappleAnchor` actor | In Progress | Anchor can be placed in test room |
+| S1-D007 | Pull-to-Point grapple | In Progress | Player travels to selected architecture node |
+| S1-D008 | Grapple targeting | In Progress | Nearest/valid anchor can be detected in range |
+| S1-D009 | Grapple debug display | In Progress | Shows state, anchor, distance, velocity |
 | S1-D010 | Camera behavior test | Open | No disorienting snap during grapple |
-| S1-D011 | Test room map | Open | Contains floor, walls, and multiple architecture nodes |
+| S1-D011 | Test room map | In Progress | `L_JacobGameplayTest` uses Sakura Temple sprites, collision test lanes, and multiple grapple nodes |
+| S1-D012 | Modern controller support | In Progress | Enhanced Input mapping context covers keyboard/mouse plus left stick, D-pad, face buttons, shoulder buttons, and trigger |
 
 ---
 
@@ -110,7 +111,7 @@ LineBlocked
 Interrupted
 ```
 
-Slice 1 can begin without LineBlocked if collision testing is not ready yet, but it must be added before real rooms.
+LineBlocked is implemented as line-of-sight filtering in `UVestigeLimbComponent` and exposed through `EVestigeGrappleFailureReason::LineBlocked`.
 
 ---
 
@@ -147,8 +148,8 @@ Only `Architecture` should be implemented in Slice 1.
 Prototype behavior:
 
 1. Player presses Grapple.
-2. `VestigeLimbComponent` searches for valid Architecture anchors in range.
-3. Best anchor is selected.
+2. `VestigeLimbComponent` searches for valid anchors in range.
+3. Best anchor is selected by distance, preferred player direction, and optional line-of-sight.
 4. Limb visual/debug line extends to anchor.
 5. Player velocity is directed toward anchor.
 6. Player arrives within arrival radius.
@@ -191,6 +192,17 @@ Recommended debug visuals:
 - Different color for valid/invalid anchor
 - Arrival radius marker
 
+Current implementation notes:
+
+- `UVestigeLimbComponent` exposes candidate counts, selected score, and `GetLastAnchorSelectionDebug()` for Blueprint/runtime inspection.
+- `UVestigeLimbComponent` can draw an on-screen debug overlay with state, failure reason, selected anchor, distance, speed, and candidate counts.
+- Targeting prefers the last non-zero horizontal movement direction so left/right anchor intent is testable.
+- The generated Jacob gameplay map imports selected crops from the Sakura Temple Asset Pack, lays them out as Paper2D sprites, and includes left, right, high, blocked, and consume-dummy anchors.
+- The Sakura test builder validates source texture paths and sprite crop bounds before touching the level. Override the source folder with `NOCTURNE_SAKURA_TEMPLE_SOURCE` if the extracted asset pack moves.
+- Slice 1 uses Enhanced Input assets under `/Game/NocturneSignal/Input`. Controller mappings are: left stick and D-pad for movement, bottom face button for jump, left face button or left shoulder for slide, right shoulder for grapple, right trigger for tentacle attack, right face button for consume, and top face button for alternate consume.
+- Legacy `DefaultInput.ini` mappings remain as a fallback path with the same controller coverage where legacy input can represent it.
+- `Tools/Unreal/validate_slice01_input.py` validates the Slice 1 InputAction assets, `IMC_Slice01` key mappings, and legacy fallback mappings through `UnrealEditor-Cmd`.
+
 ---
 
 ## 10. Test Room Requirements
@@ -226,6 +238,7 @@ No final art is required in Slice 1.
 | Release behavior | Release at anchor | Exit velocity feels controlled | Open |
 | Camera behavior | Grapple repeatedly | No harsh snap or nausea-inducing movement | Open |
 | Placeholder art | Swap placeholder sprite | Movement still works | Open |
+| Controller input | Play with modern controller | Left stick, D-pad, jump, slide, grapple, attack, consume, and alternate consume fire expected actions | Open |
 
 ---
 

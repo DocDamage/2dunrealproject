@@ -46,6 +46,14 @@
 			"Enabled": true
 		},
 		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		},
+		{
+			"Name": "DataValidation",
+			"Enabled": true
+		},
+		{
 			"Name": "LevelSequenceEditor",
 			"Enabled": true
 		}

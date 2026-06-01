@@ -57,3 +57,26 @@ RogueCharacterModel/
 # Large local-only content packs. Commit only if Git LFS is introduced.
 Content/A_Surface_Footstep/
 Content/Vefects/
+Content/2dActorPlusFiles/
+Content/Cloudz_Hi5/
+Content/DeformableSnowSystem/
+Content/EasyCheckpointSystem/
+Content/FIRETRAILOFTHESWORD/
+Content/Fire_EXP_Vol01_Free/
+Content/FogArea/
+Content/Particles_Wind_Control_System/
+Content/RPG-FlameAttackVFX/
+Content/StylizedVolClouds/
+Content/TetherAndTow/
+Content/VelocityReflectLaunchSystemUE5/
+
+# Local generated/imported Nocturne assets. Commit through LFS only when promoted.
+Content/NocturneSignal/AnimationSources/
+Content/NocturneSignal/Characters/
+Content/NocturneSignal/Environments/
+Content/NocturneSignal/Input/
+Content/NocturneSignal/Slice01/
+
+# Raw source-art and local helper plugin drops.
+SourceArt/
+Plugins/LocoHelperAI/

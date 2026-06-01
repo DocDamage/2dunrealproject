@@ -9,5 +9,6 @@ public class NocturneSignalEditorTarget : TargetRules
         DefaultBuildSettings = BuildSettingsVersion.V6;
         IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
         ExtraModuleNames.Add("NocturneSignal");
+        ExtraModuleNames.Add("NocturneSignalEditor");
     }
 }

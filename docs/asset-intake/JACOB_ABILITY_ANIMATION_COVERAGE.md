@@ -92,6 +92,7 @@ StopSlide()
 TriggerTentacleAttack()
 TriggerTentacleGrapple()
 TriggerTentacleConsume(bool bUseAlternateConsume)
+TriggerRecoveredCombatMontage(ENocturneJacobRecoveredCombatMontage MontageId)
 TryVestigeGrapple()
 ```
 
@@ -102,9 +103,10 @@ IsSliding()
 IsDoubleJumping()
 IsTentacleActionActive()
 GetCurrentAbilityAnimation()
+GetRecoveredCombatMontage(ENocturneJacobRecoveredCombatMontage MontageId)
 ```
 
-The C++ hook layer loads the existing Jacob montages for jump, land, double jump, slide, tentacle attack, tentacle grapple, and tentacle consume. One-shot tentacle attack/consume hooks clear their active state after montage playback; grapple clears when `UVestigeLimbComponent` returns to `Idle` or `Failed`.
+The C++ hook layer loads the existing Jacob montages for jump, land, double jump, slide, tentacle attack, tentacle grapple, tentacle consume, and the eight recovered FireTrail/Fighting combat candidates. One-shot tentacle attack/consume and recovered combat hooks clear their active state after montage playback; grapple clears when `UVestigeLimbComponent` returns to `Idle` or `Failed`.
 
 `ANocturnePlayerCharacter` now also owns a default `UVestigeTentacleVisualAdapter` component. The adapter can attach an imported skeletal or static tentacle mesh to Jacob's mesh/root, play configurable idle/extend/pull/release animation assets, and still draws the fallback debug line until a real mesh is assigned.
 
@@ -154,6 +156,8 @@ Additional Jacob retarget sets now available:
 /Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/VefectsVexa
 /Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FreeAnimationsPack
 /Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/RogueCharacter
+/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword
+/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations
 ```
 
 Additional candidate sets staged for next import/retarget pass:
@@ -167,7 +171,34 @@ SourceArt/AnimationSources/FightAnimationMocapPack
 Content/Vefects/Tentacles_VFX
 ```
 
-The restarted editor sees the copied `FreeAnimationsPack`, `RogueCharacter`, and `Vefects` packages. Current verified additions are 25 VefectsVexa spell/action clips, 10 FreeAnimationsPack gesture/cast clips, and 7 RogueCharacter locomotion/jump clips, all retargeted to Jacob's skeleton.
+The restarted editor sees the copied `FreeAnimationsPack`, `RogueCharacter`, and `Vefects` packages. Current verified additions are 25 VefectsVexa spell/action clips, 10 FreeAnimationsPack gesture/cast clips, 7 RogueCharacter locomotion/jump clips, 26 FireTrail sword-action clips, and 11 FightingAnimations punch/hit/death clips, all retargeted to Jacob's skeleton.
+
+RealmArchitect reconciliation report:
+
+```text
+docs/asset-intake/JACOB_REALMARCHITECT_RECONCILIATION.json
+```
+
+Recovered FireTrail/Fighting montages created from the reconciliation pass:
+
+```text
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action01
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action08
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action16
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_CrossPunch
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_HookPunch
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_ElbowPunch
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Impact
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Death
+```
+
+Recovered montage report:
+
+```text
+docs/asset-intake/JACOB_RECOVERED_MONTAGE_REPORT.json
+```
+
+Verification result: all eight recovered montages exist, resolve to `SK_Jacob_Skeleton`, and expose the requested named sections. The section mutation is handled by the `NocturneSignalEditor` editor bridge because UE 5.7 Python does not expose `UAnimMontage::AddAnimCompositeSection` directly.
 
 Useful ability-adjacent candidates:
 
@@ -176,6 +207,8 @@ Useful ability-adjacent candidates:
 | Alternate consume | `JAC_SK_UAL2_MannequinArmature_Consume` |
 | Hit/stagger | UAL1 `Hit_Chest`, `Hit_Head`; UAL2 `Hit_Knockback`; Realistic Combat `Hit_*`, `hurted`, `hit_tired` |
 | Attack variants | Motifect Martial Arts sword, staff, spear, muay thai, taekwondo, judo, and wrestling clips |
+| Sword trail attacks | FireTrailOfTheSword `JAC_Fire_A_NS_01` through `JAC_Fire_A_NS_26` |
+| Punch/death reactions | FightingAnimations `JAC_Fighting_Cross_Punch_Anim`, `Hook_Punch`, `Elbow_Punching`, `Impact_mixamo_com`, `Dying*`, `Punching*` |
 | Movement variants | UAL1 walk/jog/sprint/crouch/roll/swim; UAL2 climb/roll/shield dash/sword dash |
 | Locomotion polish | Advanced Locomotion Mechanics UE5 unarmed/pistol/rifle walk, jog, start, stop, pivot, crouch, and jump variants |
 | New jump/slide/traversal options | Game Animation Sample staged Jump/Traversal/Slide subset |

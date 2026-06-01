@@ -133,6 +133,28 @@ Result:
 | VefectsVexa retargeted `JAC_*` animation sequences | 25 | `/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton` |
 | FreeAnimationsPack retargeted `JAC_*` animation sequences | 10 | `/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton` |
 | RogueCharacter retargeted `JAC_*` animation sequences | 7 | `/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton` |
+| FireTrailOfTheSword retargeted `JAC_*` animation sequences | 26 | `/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton` |
+| FightingAnimations retargeted `JAC_*` animation sequences | 11 | `/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton` |
+
+RealmArchitect reconciliation on 2026-06-01 recovered only the missing Jacob animation deltas from the accidental RealmArchitect import. Nocturne remains the canonical Jacob destination; the `/Game/RealmArchitect/Art/Jacob` mesh, skeleton, materials, and duplicate Vexa clips were not copied into this project.
+
+Repeatable reconciliation script and report:
+
+```text
+Tools/Unreal/reconcile_realmarchitect_jacob_assets.py
+docs/asset-intake/JACOB_REALMARCHITECT_RECONCILIATION.json
+```
+
+Recovered source and destination paths:
+
+```text
+SourceArt/AnimationSources/FightingAnimations
+/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations
+/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations
+/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword
+```
+
+Verification result: 37 recovered retargeted assets, all resolving to `/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton`.
 
 MCO TC Sword source import:
 
@@ -232,6 +254,27 @@ Additional sword montages:
 
 The slash and thrust montages have `Default`, `AttackStart`, and `Recover` sections. The parry/riposte montage has `Default`, `ParryStart`, `Riposte`, and `Recover` sections.
 
+Recovered FireTrail/Fighting candidate montages:
+
+```text
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action01
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action08
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_FireTrail_Action16
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_CrossPunch
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_HookPunch
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_ElbowPunch
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Impact
+/Game/NocturneSignal/Characters/Jacob/Montages/AM_Jacob_Fighting_Death
+```
+
+These were created on 2026-06-01 from the RealmArchitect reconciliation outputs with `Tools/Unreal/create_recovered_jacob_montages.py`. They resolve to `SK_Jacob_Skeleton` and have named montage sections applied through the `NocturneSignalEditor` editor bridge.
+
+Recovered montage report:
+
+```text
+docs/asset-intake/JACOB_RECOVERED_MONTAGE_REPORT.json
+```
+
 Ability animation coverage:
 
 ```text
@@ -248,6 +291,8 @@ Current coverage summary:
 - Double jump has NinjaJump start/loop/land clips from Universal Animation Library 2.
 - Additional attack, stagger, hurt, consume, sword, cast, unarmed, and utility candidates are now available from the full Universal, Motifect Martial Arts, Realistic Combat, VefectsVexa, FreeAnimationsPack, and RogueCharacter retarget sets.
 - Additional locomotion start/stop/pivot/crouch/jump and weapon-ready movement variants are now available from Advanced Locomotion Mechanics UE5.
+- FireTrail sword actions and FightingAnimations punch/hit/death clips now have eight curated Jacob montages for candidate review.
+- `ANocturnePlayerCharacter` exposes `TriggerRecoveredCombatMontage(ENocturneJacobRecoveredCombatMontage MontageId)` and `GetRecoveredCombatMontage(...)` so Blueprint/C++ can play the recovered combat candidates by selector.
 
 Robotic tentacle visual import:
 

@@ -1,0 +1,737 @@
+{
+  "plan": {
+    "project_root": "G:\\Nocturne Signal\\Nocturne Signal",
+    "realm_root": "G:\\RealmArchitect",
+    "packs": [
+      {
+        "name": "FireTrailOfTheSword",
+        "source_mesh": "/Game/FIRETRAILOFTHESWORD/Demo/SKM_Man/SKM_Man.SKM_Man",
+        "source_root": "Hips",
+        "source_chains": [
+          [
+            "Spine",
+            "Spine",
+            "Spine2"
+          ],
+          [
+            "Head",
+            "Neck",
+            "Head"
+          ],
+          [
+            "LeftArm",
+            "LeftShoulder",
+            "LeftHand"
+          ],
+          [
+            "RightArm",
+            "RightShoulder",
+            "RightHand"
+          ],
+          [
+            "LeftLeg",
+            "LeftUpLeg",
+            "LeftToeBase"
+          ],
+          [
+            "RightLeg",
+            "RightUpLeg",
+            "RightToeBase"
+          ]
+        ],
+        "animation_dir": "/Game/FIRETRAILOFTHESWORD/Demo/Anims",
+        "prefix": "JAC_Fire_",
+        "output_dir": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword",
+        "ikrig": "/Game/NocturneSignal/Characters/Jacob/Retargeting/IK_FireTrailOfTheSword",
+        "retargeter": "/Game/NocturneSignal/Characters/Jacob/Retargeting/RTG_FireTrailOfTheSword_To_Jacob",
+        "source_animation_count": 26
+      },
+      {
+        "name": "FightingAnimations",
+        "source_mesh": "/Game/RamsterZ_FreeAnims_Volume1/Demo/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin",
+        "source_skeleton": "/Game/RamsterZ_FreeAnims_Volume1/Demo/Mannequin/Character/Mesh/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton",
+        "source_root": "pelvis",
+        "source_chains": [
+          [
+            "Spine",
+            "spine_01",
+            "spine_03"
+          ],
+          [
+            "Head",
+            "neck_01",
+            "head"
+          ],
+          [
+            "LeftArm",
+            "clavicle_l",
+            "hand_l"
+          ],
+          [
+            "RightArm",
+            "clavicle_r",
+            "hand_r"
+          ],
+          [
+            "LeftLeg",
+            "thigh_l",
+            "ball_l"
+          ],
+          [
+            "RightLeg",
+            "thigh_r",
+            "ball_r"
+          ]
+        ],
+        "animation_dir": "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations",
+        "import_destination": "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations",
+        "prefix": "JAC_Fighting_",
+        "output_dir": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations",
+        "ikrig": "/Game/NocturneSignal/Characters/Jacob/Retargeting/IK_FightingAnimations_UE4Mannequin",
+        "retargeter": "/Game/NocturneSignal/Characters/Jacob/Retargeting/RTG_FightingAnimations_To_Jacob",
+        "source_animation_count": 11,
+        "source_file_root": "G:\\RealmArchitect\\ExternalAssets\\assetingest\\PluginInstallExtracted\\Fighting_Animations\\Animations",
+        "staged_source_root": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations"
+      }
+    ],
+    "expected_retarget_count": 37
+  },
+  "staged_fighting_sources": [
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Cross_Punch_Anim.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Dying__1__mixamo_com.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Dying__2__mixamo_com.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Dying_mixamo_com.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Elbow_Punching.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Hook_Punch.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Impact_mixamo_com.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching__1_.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching__2_.FBX",
+    "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching__3_.FBX"
+  ],
+  "packs": {
+    "FireTrailOfTheSword": {
+      "source_mesh": "/Game/FIRETRAILOFTHESWORD/Demo/SKM_Man/SKM_Man.SKM_Man",
+      "target_mesh": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob.SK_Jacob",
+      "animation_dir": "/Game/FIRETRAILOFTHESWORD/Demo/Anims",
+      "animation_count": 26,
+      "source_ikrig": {
+        "path": "/Game/NocturneSignal/Characters/Jacob/Retargeting/IK_FireTrailOfTheSword.IK_FireTrailOfTheSword",
+        "mesh": "/Game/FIRETRAILOFTHESWORD/Demo/SKM_Man/SKM_Man.SKM_Man",
+        "root": "Hips",
+        "chain_count": 19,
+        "chains_added": [
+          {
+            "chain": "Spine",
+            "start": "Spine",
+            "end": "Spine2",
+            "result": "Spine"
+          },
+          {
+            "chain": "Head",
+            "start": "Neck",
+            "end": "Head",
+            "result": "Head"
+          },
+          {
+            "chain": "LeftArm",
+            "start": "LeftShoulder",
+            "end": "LeftHand",
+            "result": "LeftArm"
+          },
+          {
+            "chain": "RightArm",
+            "start": "RightShoulder",
+            "end": "RightHand",
+            "result": "RightArm"
+          },
+          {
+            "chain": "LeftLeg",
+            "start": "LeftUpLeg",
+            "end": "LeftToeBase",
+            "result": "LeftLeg"
+          },
+          {
+            "chain": "RightLeg",
+            "start": "RightUpLeg",
+            "end": "RightToeBase",
+            "result": "RightLeg"
+          }
+        ],
+        "validation": {
+          "bone_count": 65,
+          "required_bones": [
+            "Hips",
+            "Spine",
+            "Spine2",
+            "Neck",
+            "Head",
+            "LeftShoulder",
+            "LeftHand",
+            "RightShoulder",
+            "RightHand",
+            "LeftUpLeg",
+            "LeftToeBase",
+            "RightUpLeg",
+            "RightToeBase"
+          ]
+        }
+      },
+      "target_ikrig": {
+        "path": "/Game/NocturneSignal/Characters/Jacob/Retargeting/IK_Jacob_Reconcile.IK_Jacob_Reconcile",
+        "mesh": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob.SK_Jacob",
+        "root": "DEF-PELVIS01",
+        "chain_count": 7,
+        "chains_added": [
+          {
+            "chain": "Spine",
+            "start": "DEF-CHEST",
+            "end": "DEF-HEAD",
+            "result": "Spine"
+          },
+          {
+            "chain": "Head",
+            "start": "DEF-NECK",
+            "end": "DEF-HEAD",
+            "result": "Head"
+          },
+          {
+            "chain": "LeftArm",
+            "start": "DEF-SHOULDER_L",
+            "end": "DEF-HAND_L",
+            "result": "LeftArm"
+          },
+          {
+            "chain": "RightArm",
+            "start": "DEF-SHOULDER_R",
+            "end": "DEF-HAND_R",
+            "result": "RightArm"
+          },
+          {
+            "chain": "LeftLeg",
+            "start": "DEF-ULEG_L",
+            "end": "DEF-FOOTFINGERS_L",
+            "result": "LeftLeg"
+          },
+          {
+            "chain": "RightLeg",
+            "start": "DEF-ULEG_R",
+            "end": "DEF-FOOTFINGERS_R",
+            "result": "RightLeg"
+          }
+        ],
+        "validation": {
+          "bone_count": 162,
+          "required_bones": [
+            "DEF-PELVIS01",
+            "DEF-CHEST",
+            "DEF-HEAD",
+            "DEF-NECK",
+            "DEF-HEAD",
+            "DEF-SHOULDER_L",
+            "DEF-HAND_L",
+            "DEF-SHOULDER_R",
+            "DEF-HAND_R",
+            "DEF-ULEG_L",
+            "DEF-FOOTFINGERS_L",
+            "DEF-ULEG_R",
+            "DEF-FOOTFINGERS_R"
+          ]
+        }
+      },
+      "retargeter": {
+        "path": "/Game/NocturneSignal/Characters/Jacob/Retargeting/RTG_FireTrailOfTheSword_To_Jacob.RTG_FireTrailOfTheSword_To_Jacob",
+        "num_ops": 11,
+        "mappings": {
+          "Spine": "Spine",
+          "Head": "Head",
+          "LeftArm": "LeftArm",
+          "RightArm": "RightArm",
+          "LeftLeg": "LeftLeg",
+          "RightLeg": "RightLeg"
+        }
+      },
+      "retargeted_assets": [
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_01",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_01.JAC_Fire_A_NS_01",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_02",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_02.JAC_Fire_A_NS_02",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_03",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_03.JAC_Fire_A_NS_03",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_04",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_04.JAC_Fire_A_NS_04",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_05",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_05.JAC_Fire_A_NS_05",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_06",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_06.JAC_Fire_A_NS_06",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_07",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_07.JAC_Fire_A_NS_07",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_08",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_08.JAC_Fire_A_NS_08",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_09",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_09.JAC_Fire_A_NS_09",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_10",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_10.JAC_Fire_A_NS_10",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_11",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_11.JAC_Fire_A_NS_11",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_12",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_12.JAC_Fire_A_NS_12",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_13",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_13.JAC_Fire_A_NS_13",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_14",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_14.JAC_Fire_A_NS_14",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_15",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_15.JAC_Fire_A_NS_15",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_16",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_16.JAC_Fire_A_NS_16",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_17",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_17.JAC_Fire_A_NS_17",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_18",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_18.JAC_Fire_A_NS_18",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_19",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_19.JAC_Fire_A_NS_19",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_20",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_20.JAC_Fire_A_NS_20",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_21",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_21.JAC_Fire_A_NS_21",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_22",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_22.JAC_Fire_A_NS_22",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_23",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_23.JAC_Fire_A_NS_23",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_24",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_24.JAC_Fire_A_NS_24",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_25",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_25.JAC_Fire_A_NS_25",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_26",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FireTrailOfTheSword/JAC_Fire_A_NS_26.JAC_Fire_A_NS_26",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.5
+        }
+      ],
+      "result": "passed"
+    },
+    "FightingAnimations": {
+      "source_mesh": "/Game/RamsterZ_FreeAnims_Volume1/Demo/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin",
+      "target_mesh": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob.SK_Jacob",
+      "animation_dir": "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations",
+      "animation_count": 11,
+      "source_ikrig": {
+        "path": "/Game/NocturneSignal/Characters/Jacob/Retargeting/IK_FightingAnimations_UE4Mannequin.IK_FightingAnimations_UE4Mannequin",
+        "mesh": "/Game/RamsterZ_FreeAnims_Volume1/Demo/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin",
+        "root": "pelvis",
+        "chain_count": 20,
+        "chains_added": [
+          {
+            "chain": "Spine",
+            "start": "spine_01",
+            "end": "spine_03",
+            "result": "Spine"
+          },
+          {
+            "chain": "Head",
+            "start": "neck_01",
+            "end": "head",
+            "result": "Head"
+          },
+          {
+            "chain": "LeftArm",
+            "start": "clavicle_l",
+            "end": "hand_l",
+            "result": "LeftArm"
+          },
+          {
+            "chain": "RightArm",
+            "start": "clavicle_r",
+            "end": "hand_r",
+            "result": "RightArm"
+          },
+          {
+            "chain": "LeftLeg",
+            "start": "thigh_l",
+            "end": "ball_l",
+            "result": "LeftLeg"
+          },
+          {
+            "chain": "RightLeg",
+            "start": "thigh_r",
+            "end": "ball_r",
+            "result": "RightLeg"
+          }
+        ],
+        "validation": {
+          "bone_count": 69,
+          "required_bones": [
+            "pelvis",
+            "spine_01",
+            "spine_03",
+            "neck_01",
+            "head",
+            "clavicle_l",
+            "hand_l",
+            "clavicle_r",
+            "hand_r",
+            "thigh_l",
+            "ball_l",
+            "thigh_r",
+            "ball_r"
+          ]
+        }
+      },
+      "target_ikrig": {
+        "path": "/Game/NocturneSignal/Characters/Jacob/Retargeting/IK_Jacob_Reconcile.IK_Jacob_Reconcile",
+        "mesh": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob.SK_Jacob",
+        "root": "DEF-PELVIS01",
+        "chain_count": 7,
+        "chains_added": [
+          {
+            "chain": "Spine",
+            "start": "DEF-CHEST",
+            "end": "DEF-HEAD",
+            "result": "Spine"
+          },
+          {
+            "chain": "Head",
+            "start": "DEF-NECK",
+            "end": "DEF-HEAD",
+            "result": "Head"
+          },
+          {
+            "chain": "LeftArm",
+            "start": "DEF-SHOULDER_L",
+            "end": "DEF-HAND_L",
+            "result": "LeftArm"
+          },
+          {
+            "chain": "RightArm",
+            "start": "DEF-SHOULDER_R",
+            "end": "DEF-HAND_R",
+            "result": "RightArm"
+          },
+          {
+            "chain": "LeftLeg",
+            "start": "DEF-ULEG_L",
+            "end": "DEF-FOOTFINGERS_L",
+            "result": "LeftLeg"
+          },
+          {
+            "chain": "RightLeg",
+            "start": "DEF-ULEG_R",
+            "end": "DEF-FOOTFINGERS_R",
+            "result": "RightLeg"
+          }
+        ],
+        "validation": {
+          "bone_count": 162,
+          "required_bones": [
+            "DEF-PELVIS01",
+            "DEF-CHEST",
+            "DEF-HEAD",
+            "DEF-NECK",
+            "DEF-HEAD",
+            "DEF-SHOULDER_L",
+            "DEF-HAND_L",
+            "DEF-SHOULDER_R",
+            "DEF-HAND_R",
+            "DEF-ULEG_L",
+            "DEF-FOOTFINGERS_L",
+            "DEF-ULEG_R",
+            "DEF-FOOTFINGERS_R"
+          ]
+        }
+      },
+      "retargeter": {
+        "path": "/Game/NocturneSignal/Characters/Jacob/Retargeting/RTG_FightingAnimations_To_Jacob.RTG_FightingAnimations_To_Jacob",
+        "num_ops": 11,
+        "mappings": {
+          "Spine": "Spine",
+          "Head": "Head",
+          "LeftArm": "LeftArm",
+          "RightArm": "RightArm",
+          "LeftLeg": "LeftLeg",
+          "RightLeg": "RightLeg"
+        }
+      },
+      "retargeted_assets": [
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Cross_Punch_Anim",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Cross_Punch_Anim.JAC_Fighting_Cross_Punch_Anim",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 2.0
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying__1__mixamo_com",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying__1__mixamo_com.JAC_Fighting_Dying__1__mixamo_com",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 4.5
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying__2__mixamo_com",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying__2__mixamo_com.JAC_Fighting_Dying__2__mixamo_com",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 4.400000095367432
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying_mixamo_com",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Dying_mixamo_com.JAC_Fighting_Dying_mixamo_com",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 5.766666889190674
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Elbow_Punching",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Elbow_Punching.JAC_Fighting_Elbow_Punching",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.399999976158142
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Hook_Punch",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Hook_Punch.JAC_Fighting_Hook_Punch",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 2.1666667461395264
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Impact_mixamo_com",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Impact_mixamo_com.JAC_Fighting_Impact_mixamo_com",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.2333333492279053
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching.JAC_Fighting_Punching",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.0
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching__1",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching__1.JAC_Fighting_Punching__1",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 0.8666666746139526
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching__2",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching__2.JAC_Fighting_Punching__2",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.2333333492279053
+        },
+        {
+          "package": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching__3",
+          "object": "/Game/NocturneSignal/Characters/Jacob/RetargetedAnimations/FightingAnimations/JAC_Fighting_Punching__3.JAC_Fighting_Punching__3",
+          "class": "AnimSequence",
+          "skeleton": "/Game/NocturneSignal/Characters/Jacob/SK_Jacob_Skeleton.SK_Jacob_Skeleton",
+          "play_length": 1.0
+        }
+      ],
+      "result": "passed"
+    }
+  },
+  "result": "passed",
+  "fighting_import": {
+    "imported_sources": 11,
+    "failed_sources": [],
+    "imported": [
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Cross_Punch_Anim.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Cross_Punch_Anim.Cross_Punch_Anim"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Dying__1__mixamo_com.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Dying__1__mixamo_com.Dying__1__mixamo_com"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Dying__2__mixamo_com.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Dying__2__mixamo_com.Dying__2__mixamo_com"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Dying_mixamo_com.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Dying_mixamo_com.Dying_mixamo_com"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Elbow_Punching.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Elbow_Punching.Elbow_Punching"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Hook_Punch.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Hook_Punch.Hook_Punch"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Impact_mixamo_com.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Impact_mixamo_com.Impact_mixamo_com"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Punching.Punching"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching__1_.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Punching__1.Punching__1"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching__2_.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Punching__2.Punching__2"
+        ]
+      },
+      {
+        "source": "G:\\Nocturne Signal\\Nocturne Signal\\SourceArt\\AnimationSources\\FightingAnimations\\Punching__3_.FBX",
+        "imported": [
+          "/Game/NocturneSignal/AnimationSources/FightingAnimations/Animations/Punching__3.Punching__3"
+        ]
+      }
+    ]
+  },
+  "total_retargeted_assets": 37
+}

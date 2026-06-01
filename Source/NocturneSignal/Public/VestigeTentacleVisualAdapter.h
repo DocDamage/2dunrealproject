@@ -5,7 +5,9 @@
 #include "VestigeTentacleVisualAdapter.generated.h"
 
 class AGrappleAnchor;
+class AActor;
 class UAnimationAsset;
+class UMaterialInterface;
 class USceneComponent;
 class USkeletalMesh;
 class USkeletalMeshComponent;
@@ -64,6 +66,36 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals")
     bool bDrawFallbackDebugLine = true;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals")
+    bool bUseFallbackBeam = true;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals", meta = (ClampMin = "0.5"))
+    float FallbackBeamRadius = 4.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    bool bUseTentaclesVfxPackage = true;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    TObjectPtr<UStaticMesh> TentaclesVfxBeamMesh;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    TObjectPtr<UMaterialInterface> TentaclesVfxBeamMaterial;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    TSubclassOf<AActor> TentaclesVfxGooActorClass;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    bool bSpawnTentaclesVfxGooActor = false;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    TObjectPtr<UStaticMesh> TentaclesVfxImpactMesh;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX")
+    TObjectPtr<UMaterialInterface> TentaclesVfxImpactMaterial;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Tentacles VFX", meta = (ClampMin = "0.01"))
+    float TentaclesVfxImpactScale = 0.22f;
+
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Vestige Visuals|Mesh")
     bool bAutoCreateTentacleMesh = true;
 
@@ -99,7 +131,12 @@ public:
 
 private:
     USceneComponent* ResolveAttachParent() const;
+    void LoadTentaclesVfxPackageDefaults();
     void PlayVisualAnimation(UAnimationAsset* AnimationAsset, bool bLoop);
+    void SetFallbackBeamVisible(bool bVisible);
+    void UpdateFallbackBeam(const FVector& WorldStart, const FVector& WorldEnd);
+    void UpdateTentaclesVfxActor(const FVector& WorldEnd);
+    void DestroyTentaclesVfxActor();
 
     UPROPERTY(Transient)
     TObjectPtr<USceneComponent> TentacleVisualRoot;
@@ -109,4 +146,15 @@ private:
 
     UPROPERTY(Transient)
     TObjectPtr<UStaticMeshComponent> TentacleStaticMeshComponent;
+
+    UPROPERTY(Transient)
+    TObjectPtr<UStaticMeshComponent> TentacleFallbackBeamComponent;
+
+    UPROPERTY(Transient)
+    TObjectPtr<UStaticMeshComponent> TentacleImpactComponent;
+
+    UPROPERTY(Transient)
+    TObjectPtr<AActor> ActiveTentaclesVfxActor;
+
+    bool bTentacleVisualActive = false;
 };

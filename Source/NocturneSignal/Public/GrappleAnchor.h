@@ -4,6 +4,9 @@
 #include "GameFramework/Actor.h"
 #include "GrappleAnchor.generated.h"
 
+class USceneComponent;
+class UStaticMeshComponent;
+
 UENUM(BlueprintType)
 enum class EGrappleAnchorType : uint8
 {
@@ -28,6 +31,9 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Nocturne|Grapple")
     FVector GetAnchorLocation() const;
 
+    UFUNCTION(BlueprintCallable, Category = "Nocturne|Grapple")
+    bool ShouldPullAnchorToGrappler() const;
+
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Nocturne|Grapple")
     EGrappleAnchorType AnchorType = EGrappleAnchorType::Architecture;
 
@@ -45,6 +51,15 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Nocturne|Grapple", meta = (ClampMin = "1.0"))
     float ArrivalRadius = 18.0f;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Nocturne|Grapple|Grabbable")
+    bool bPullAnchorToGrappler = false;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Nocturne|Components")
+    TObjectPtr<USceneComponent> AnchorRoot;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Nocturne|Components")
+    TObjectPtr<UStaticMeshComponent> AnchorDisplayMesh;
 
 protected:
     virtual void BeginPlay() override;

@@ -19,7 +19,7 @@
 | V-005 | Architecture decisions | File inspection | `docs/architecture/ARCHITECTURE_DECISIONS.md` exists | Fixed | Repo file exists |
 | V-006 | Risk register | File inspection | `docs/risks/RISK_REGISTER.md` exists | Fixed | Repo file exists |
 | V-007 | Unreal project opens | Editor launch | UE 5.7 opens project without fatal plugin errors | Verified | Live editor is open on 2026-05-30; Unreal MCP bridge reports UE `5.7.4-51494982+++UE5+Release-5.7` |
-| V-008 | C++ compile | Build in IDE or Unreal | Project compiles cleanly | Verified | Non-MCP UBT build succeeded on 2026-05-31 after the editor was closed: `NocturneSignalEditor Win64 Development`; updated Jacob/tentacle C++ and UnrealMCPBridge plugin compiled successfully. Remaining output was deprecation warnings in plugin code, not build errors |
+| V-008 | C++ compile | Build in IDE or Unreal | Project compiles cleanly | Verified | Non-MCP UBT build succeeded on 2026-05-31 after the editor was closed: `NocturneSignalEditor Win64 Development`; updated Jacob/tentacle C++ and UnrealMCPBridge plugin compiled successfully. Later UBT builds on 2026-05-31 also passed after directional grapple targeting, line-of-sight filtering, `LineBlocked` failure reporting, and debug telemetry were added |
 | V-009 | Packaged build | Unreal package | Package succeeds with required plugins | Open | Not tested |
 
 ---
@@ -30,7 +30,7 @@
 |---|---|---|---|---|---|
 | V-010 | Paper2D | Editor/plugin check | Plugin enabled and sprites render | Open | Not tested |
 | V-011 | PaperZD / current plugin set | Compile + PIE + package | Animation framework and enabled plugins work without blocking package | In Progress | Plugin ids resolve locally; non-MCP editor-target compile succeeds. PIE and packaging still need validation |
-| V-012 | Enhanced Input | PIE input test | Keyboard/controller actions fire correctly | Open | Not tested |
+| V-012 | Enhanced Input | PIE input test | Keyboard/controller actions fire correctly | In Progress | Enhanced Input assets created under `/Game/NocturneSignal/Input`; `IMC_Slice01` maps keyboard/mouse and modern controller actions. `ANocturnePlayerCharacter` now adds the mapping context at BeginPlay and binds through `UEnhancedInputComponent`, with legacy input mappings retained as fallback. `Tools/Unreal/validate_slice01_input.py` passed through `UnrealEditor-Cmd` on 2026-05-31; PIE controller validation still required |
 | V-013 | Niagara | PIE VFX test | 2D-compatible test effect renders correctly | Open | Not tested |
 | V-014 | MetaSounds | Beat clock test | Beat event timing is reliable enough for Choir Resonance | Open | Not tested |
 | V-015 | Enabled plugin reconciliation | `.uproject` reconciliation | Every enabled plugin documented in plugin register | Fixed | Current `.uproject` enabled plugin list is documented; compile verification pending Live Coding shutdown |
@@ -69,6 +69,7 @@
 | V-037 | Landing | Landing event test | Landing state triggers consistently | Open | Not tested |
 | V-038 | Platform collision | Platform test room | No ledge sticking beyond intended behavior | Open | Not tested |
 | V-039 | Placeholder art | Sprite swap test | Movement survives placeholder/final art swap | Open | Not tested |
+| V-039A | Modern controller movement | PIE controller test | Left stick and D-pad move, bottom face button jumps, left face/left shoulder slides, right shoulder grapples, right trigger attacks, right face consumes, top face alternate-consumes | In Progress | `Tools/Unreal/validate_slice01_input.py` validates `IA_MoveHorizontal`, `IA_MoveLeft`, `IA_MoveRight`, `IA_Jump`, `IA_Slide`, `IA_TentacleGrapple`, `IA_TentacleAttack`, `IA_TentacleConsume`, `IA_TentacleAlternateConsume`, `IMC_Slice01`, and legacy fallback mappings; commandlet passed on 2026-05-31. Runtime controller pass still required |
 
 ---
 
@@ -76,14 +77,14 @@
 
 | ID | System | Verification Method | Pass Condition | Status | Evidence |
 |---|---|---|---|---|---|
-| V-040 | Grapple component | PIE/debug test | Component attaches to player and reports state | Open | Not tested |
-| V-041 | Grapple anchor actor | Placement test | Anchor can be placed and detected | Open | Not tested |
-| V-042 | Anchor range | In/out range test | Only anchors in range are valid | Open | Not tested |
+| V-040 | Grapple component | PIE/debug test | Component attaches to player and reports state | In Progress | `UVestigeLimbComponent` compiles on the player and exposes state, current anchor, failure reason, candidate counts, best score, and last selection debug text; PIE runtime inspection still required |
+| V-041 | Grapple anchor actor | Placement test | Anchor can be placed and detected | In Progress | `L_JacobGameplayTest` generation script places right, left, high, blocked, and consume-dummy `AGrappleAnchor` actors in the Sakura Temple test room; commandlet inspection found 5 anchor actors, 33 Sakura sprite actors, 6 hidden collision actors, and playable Jacob; PIE runtime detection still required |
+| V-042 | Anchor range | In/out range test | Only anchors in range are valid | In Progress | C++ filters by `MaxGrappleRange` before scoring and records in-range candidate count; manual near/far runtime test still required |
 | V-043 | Pull-to-Point | Grapple all test nodes | Player reaches target without orbiting or jitter | Open | Not tested |
 | V-044 | Release behavior | Arrival test | Release occurs cleanly within arrival radius | Open | Not tested |
 | V-045 | Exit velocity | Repeated release test | Exit feels controlled and predictable | Open | Not tested |
 | V-046 | Camera | Repeated grapple test | No harsh snap or disorientation | Open | Not tested |
-| V-047 | Debug display | Runtime inspection | State, anchor, distance, velocity visible | Open | Not tested |
+| V-047 | Debug display | Runtime inspection | State, anchor, distance, velocity visible | In Progress | Selected anchor line/arrival radius draw in-world; component exposes state, current anchor, candidate counts, selected score, and last selection debug text. `bDrawDebugOverlay` adds an on-screen state/failure/anchor/distance/speed/candidate readout; PIE readability pass still required |
 | V-048 | Swing grapple | Test room sequence | Swing arc can be completed without clipping | Open | Future slice |
 | V-049 | Chain grapple | 3-node sequence | Chain can be completed without ground contact | Open | Future slice |
 

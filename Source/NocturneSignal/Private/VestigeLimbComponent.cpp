@@ -2,9 +2,15 @@
 #include "GrappleAnchor.h"
 #include "VestigeTentacleVisualAdapter.h"
 #include "DrawDebugHelpers.h"
+#include "Engine/Engine.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+
+namespace
+{
+constexpr uint64 VestigeDebugOverlayKey = 0x76535447;
+}
 
 UVestigeLimbComponent::UVestigeLimbComponent()
 {
@@ -25,9 +31,18 @@ void UVestigeLimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+    TickTimedGrappleState(DeltaTime);
+
     if (GrappleState == EVestigeGrappleState::PullingPlayer)
     {
-        TickPullToPoint(DeltaTime);
+        if (CurrentAnchor && (bPullingAnchorToOwner || CurrentAnchor->ShouldPullAnchorToGrappler()))
+        {
+            TickPullAnchorToOwner(DeltaTime);
+        }
+        else
+        {
+            TickPullToPoint(DeltaTime);
+        }
     }
 
     if (CurrentAnchor && VisualAdapter)
@@ -42,6 +57,8 @@ void UVestigeLimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
         DrawDebugLine(GetWorld(), OwnerLocation, CurrentAnchor->GetAnchorLocation(), FColor::Cyan, false, 0.0f, 0, 2.0f);
         DrawDebugSphere(GetWorld(), CurrentAnchor->GetAnchorLocation(), ArrivalRadius, 16, FColor::White, false, 0.0f);
     }
+
+    DrawDebugOverlay();
 }
 
 bool UVestigeLimbComponent::TryStartPullToPoint()
@@ -57,19 +74,29 @@ bool UVestigeLimbComponent::TryStartPullToPoint()
     AGrappleAnchor* Anchor = FindBestAnchor();
     if (!Anchor)
     {
-        LastFailureReason = EVestigeGrappleFailureReason::NoValidAnchor;
+        if (LastAnchorCandidatesDirectionallyValid > 0 && LastAnchorCandidatesVisible == 0)
+        {
+            LastFailureReason = EVestigeGrappleFailureReason::LineBlocked;
+        }
+        else if (LastAnchorCandidatesEvaluated > 0 && LastAnchorCandidatesInRange == 0)
+        {
+            LastFailureReason = EVestigeGrappleFailureReason::OutOfRange;
+        }
+        else
+        {
+            LastFailureReason = EVestigeGrappleFailureReason::NoValidAnchor;
+        }
         SetGrappleState(EVestigeGrappleState::Failed);
         SetGrappleState(EVestigeGrappleState::Idle);
         return false;
     }
 
     SetCurrentAnchor(Anchor);
+    bPullingAnchorToOwner = Anchor->ShouldPullAnchorToGrappler();
     LastFailureReason = EVestigeGrappleFailureReason::None;
     CurrentPullVelocity = FVector::ZeroVector;
 
-    SetGrappleState(EVestigeGrappleState::Extending);
-    SetGrappleState(EVestigeGrappleState::Anchored);
-    SetGrappleState(EVestigeGrappleState::PullingPlayer);
+    SetTimedGrappleState(EVestigeGrappleState::Extending, GrappleExtendDuration);
     return true;
 }
 
@@ -77,6 +104,8 @@ void UVestigeLimbComponent::CancelGrapple()
 {
     LastFailureReason = EVestigeGrappleFailureReason::Interrupted;
     CurrentPullVelocity = FVector::ZeroVector;
+    bPullingAnchorToOwner = false;
+    TimedStateRemainingSeconds = 0.0f;
 
     if (VisualAdapter)
     {
@@ -87,20 +116,34 @@ void UVestigeLimbComponent::CancelGrapple()
     SetGrappleState(EVestigeGrappleState::Idle);
 }
 
-AGrappleAnchor* UVestigeLimbComponent::FindBestAnchor() const
+AGrappleAnchor* UVestigeLimbComponent::FindBestAnchor()
 {
     if (!GetOwner() || !GetWorld())
     {
+        LastAnchorCandidatesEvaluated = 0;
+        LastAnchorCandidatesInRange = 0;
+        LastAnchorCandidatesVisible = 0;
+        LastAnchorCandidatesDirectionallyValid = 0;
+        LastBestAnchorScore = 0.0f;
+        LastAnchorSelectionDebug = TEXT("No owner or world.");
         return nullptr;
     }
+
+    LastAnchorCandidatesEvaluated = 0;
+    LastAnchorCandidatesInRange = 0;
+    LastAnchorCandidatesVisible = 0;
+    LastAnchorCandidatesDirectionallyValid = 0;
+    LastBestAnchorScore = 0.0f;
+    LastAnchorSelectionDebug = TEXT("No valid anchor found.");
 
     TArray<AActor*> FoundActors;
     UGameplayStatics::GetAllActorsOfClass(GetWorld(), AGrappleAnchor::StaticClass(), FoundActors);
 
     const FVector OwnerLocation = GetOwner()->GetActorLocation();
     AGrappleAnchor* BestAnchor = nullptr;
-    float BestDistanceSquared = TNumericLimits<float>::Max();
+    float BestScore = TNumericLimits<float>::Max();
     const float MaxRangeSquared = MaxGrappleRange * MaxGrappleRange;
+    const FVector PreferredDirection = PreferredGrappleDirection.GetSafeNormal();
 
     for (AActor* Actor : FoundActors)
     {
@@ -109,21 +152,73 @@ AGrappleAnchor* UVestigeLimbComponent::FindBestAnchor() const
         {
             continue;
         }
+        ++LastAnchorCandidatesEvaluated;
 
         const float DistanceSquared = FVector::DistSquared(OwnerLocation, Anchor->GetAnchorLocation());
         if (DistanceSquared > MaxRangeSquared)
         {
             continue;
         }
+        ++LastAnchorCandidatesInRange;
 
-        if (DistanceSquared < BestDistanceSquared)
+        const FVector ToAnchor = (Anchor->GetAnchorLocation() - OwnerLocation).GetSafeNormal();
+        const float DirectionDot = FVector::DotProduct(PreferredDirection, ToAnchor);
+        if (DirectionDot < MinimumDirectionalDot)
         {
-            BestDistanceSquared = DistanceSquared;
+            continue;
+        }
+        ++LastAnchorCandidatesDirectionallyValid;
+
+        if (!HasLineOfSightToAnchor(*Anchor))
+        {
+            continue;
+        }
+        ++LastAnchorCandidatesVisible;
+
+        const float Distance = FMath::Sqrt(DistanceSquared);
+        const float Score = Distance - (FMath::Max(0.0f, DirectionDot) * DirectionalAnchorScoreBonus);
+
+        if (Score < BestScore)
+        {
+            BestScore = Score;
             BestAnchor = Anchor;
         }
     }
 
+    if (BestAnchor)
+    {
+        LastBestAnchorScore = BestScore;
+        LastAnchorSelectionDebug = FString::Printf(
+            TEXT("Selected %s. Evaluated=%d InRange=%d Directional=%d Visible=%d Score=%.1f"),
+            *BestAnchor->GetName(),
+            LastAnchorCandidatesEvaluated,
+            LastAnchorCandidatesInRange,
+            LastAnchorCandidatesDirectionallyValid,
+            LastAnchorCandidatesVisible,
+            LastBestAnchorScore);
+    }
+    else
+    {
+        LastAnchorSelectionDebug = FString::Printf(
+            TEXT("No valid anchor. Evaluated=%d InRange=%d Directional=%d Visible=%d"),
+            LastAnchorCandidatesEvaluated,
+            LastAnchorCandidatesInRange,
+            LastAnchorCandidatesDirectionallyValid,
+            LastAnchorCandidatesVisible);
+    }
+
     return BestAnchor;
+}
+
+void UVestigeLimbComponent::SetPreferredGrappleDirection(FVector NewDirection)
+{
+    NewDirection.Z = 0.0f;
+    if (!NewDirection.Normalize())
+    {
+        return;
+    }
+
+    PreferredGrappleDirection = NewDirection;
 }
 
 void UVestigeLimbComponent::SetVisualAdapter(UVestigeTentacleVisualAdapter* NewVisualAdapter)
@@ -144,6 +239,11 @@ AGrappleAnchor* UVestigeLimbComponent::GetCurrentAnchor() const
 EVestigeGrappleFailureReason UVestigeLimbComponent::GetLastFailureReason() const
 {
     return LastFailureReason;
+}
+
+FString UVestigeLimbComponent::GetLastAnchorSelectionDebug() const
+{
+    return LastAnchorSelectionDebug;
 }
 
 void UVestigeLimbComponent::SetGrappleState(EVestigeGrappleState NewState)
@@ -203,6 +303,143 @@ void UVestigeLimbComponent::NotifyVisualAdapterForState(EVestigeGrappleState New
     }
 }
 
+bool UVestigeLimbComponent::HasLineOfSightToAnchor(const AGrappleAnchor& Anchor) const
+{
+    if (!bRequireAnchorLineOfSight || !GetOwner() || !GetWorld())
+    {
+        return true;
+    }
+
+    FHitResult Hit;
+    FCollisionQueryParams QueryParams(SCENE_QUERY_STAT(VestigeAnchorLineOfSight), false);
+    QueryParams.AddIgnoredActor(GetOwner());
+    QueryParams.AddIgnoredActor(&Anchor);
+
+    const FVector Start = GetOwner()->GetActorLocation();
+    const FVector End = Anchor.GetAnchorLocation();
+    const bool bHit = GetWorld()->LineTraceSingleByChannel(
+        Hit,
+        Start,
+        End,
+        AnchorLineOfSightChannel,
+        QueryParams);
+
+    return !bHit;
+}
+
+void UVestigeLimbComponent::TickTimedGrappleState(float DeltaTime)
+{
+    if (GrappleState != EVestigeGrappleState::Extending
+        && GrappleState != EVestigeGrappleState::Releasing)
+    {
+        return;
+    }
+
+    TimedStateRemainingSeconds -= FMath::Max(DeltaTime, 0.0f);
+    if (TimedStateRemainingSeconds > 0.0f)
+    {
+        return;
+    }
+
+    if (GrappleState == EVestigeGrappleState::Extending)
+    {
+        AdvanceFromExtendingState();
+    }
+    else if (GrappleState == EVestigeGrappleState::Releasing)
+    {
+        AdvanceFromReleasingState();
+    }
+}
+
+void UVestigeLimbComponent::SetTimedGrappleState(EVestigeGrappleState NewState, float DurationSeconds)
+{
+    TimedStateRemainingSeconds = FMath::Max(DurationSeconds, 0.0f);
+    SetGrappleState(NewState);
+
+    if (TimedStateRemainingSeconds > 0.0f)
+    {
+        return;
+    }
+
+    if (NewState == EVestigeGrappleState::Extending)
+    {
+        AdvanceFromExtendingState();
+    }
+    else if (NewState == EVestigeGrappleState::Releasing)
+    {
+        AdvanceFromReleasingState();
+    }
+}
+
+void UVestigeLimbComponent::AdvanceFromExtendingState()
+{
+    if (GrappleState != EVestigeGrappleState::Extending)
+    {
+        return;
+    }
+
+    if (!CurrentAnchor)
+    {
+        CancelGrapple();
+        return;
+    }
+
+    TimedStateRemainingSeconds = 0.0f;
+    SetGrappleState(EVestigeGrappleState::Anchored);
+    SetGrappleState(EVestigeGrappleState::PullingPlayer);
+}
+
+void UVestigeLimbComponent::AdvanceFromReleasingState()
+{
+    if (GrappleState != EVestigeGrappleState::Releasing)
+    {
+        return;
+    }
+
+    TimedStateRemainingSeconds = 0.0f;
+    SetGrappleState(EVestigeGrappleState::Retracting);
+    SetCurrentAnchor(nullptr);
+    SetGrappleState(EVestigeGrappleState::Idle);
+}
+
+void UVestigeLimbComponent::DrawDebugOverlay() const
+{
+    if (!bDrawDebugOverlay || !GEngine)
+    {
+        return;
+    }
+
+    const ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
+    const UCharacterMovementComponent* Movement = OwnerCharacter ? OwnerCharacter->GetCharacterMovement() : nullptr;
+    const float Speed = Movement ? Movement->Velocity.Size() : 0.0f;
+
+    float DistanceToAnchor = 0.0f;
+    if (OwnerCharacter && CurrentAnchor)
+    {
+        DistanceToAnchor = FVector::Dist(OwnerCharacter->GetActorLocation(), CurrentAnchor->GetAnchorLocation());
+    }
+
+    const FString DebugText = FString::Printf(
+        TEXT("Vestige | State=%s Failure=%s Anchor=%s Dist=%.0f Speed=%.0f\nCandidates | Total=%d Range=%d Direction=%d Visible=%d Score=%.1f\n%s"),
+        *StaticEnum<EVestigeGrappleState>()->GetNameStringByValue(static_cast<int64>(GrappleState)),
+        *StaticEnum<EVestigeGrappleFailureReason>()->GetNameStringByValue(static_cast<int64>(LastFailureReason)),
+        *GetNameSafe(CurrentAnchor),
+        DistanceToAnchor,
+        Speed,
+        LastAnchorCandidatesEvaluated,
+        LastAnchorCandidatesInRange,
+        LastAnchorCandidatesDirectionallyValid,
+        LastAnchorCandidatesVisible,
+        LastBestAnchorScore,
+        *LastAnchorSelectionDebug);
+
+    GEngine->AddOnScreenDebugMessage(
+        VestigeDebugOverlayKey,
+        0.0f,
+        LastFailureReason == EVestigeGrappleFailureReason::None ? FColor::Cyan : FColor::Yellow,
+        DebugText);
+}
+
 void UVestigeLimbComponent::TickPullToPoint(float DeltaTime)
 {
     ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
@@ -219,7 +456,7 @@ void UVestigeLimbComponent::TickPullToPoint(float DeltaTime)
 
     if (Distance <= FMath::Max(ArrivalRadius, CurrentAnchor->ArrivalRadius))
     {
-        FinishGrappleRelease();
+        FinishGrappleRelease(true);
         return;
     }
 
@@ -233,10 +470,48 @@ void UVestigeLimbComponent::TickPullToPoint(float DeltaTime)
     }
 }
 
-void UVestigeLimbComponent::FinishGrappleRelease()
+FVector UVestigeLimbComponent::GetAnchorPullTargetLocation(const AActor& OwnerActor) const
+{
+    FVector PullDirection = PreferredGrappleDirection;
+    PullDirection.Z = 0.0f;
+    if (!PullDirection.Normalize() || FMath::Abs(PullDirection.X) < KINDA_SMALL_NUMBER)
+    {
+        PullDirection = FVector::ForwardVector;
+    }
+
+    FVector TargetLocation = CurrentAnchor ? CurrentAnchor->GetActorLocation() : OwnerActor.GetActorLocation();
+    TargetLocation.X = OwnerActor.GetActorLocation().X + PullDirection.X * 95.0f;
+    TargetLocation.Y = OwnerActor.GetActorLocation().Y;
+    return TargetLocation;
+}
+
+void UVestigeLimbComponent::TickPullAnchorToOwner(float DeltaTime)
+{
+    AActor* OwnerActor = GetOwner();
+    if (!OwnerActor || !CurrentAnchor)
+    {
+        CancelGrapple();
+        return;
+    }
+
+    const FVector TargetLocation = GetAnchorPullTargetLocation(*OwnerActor);
+    const FVector AnchorLocation = CurrentAnchor->GetActorLocation();
+    const float Distance = FVector::Dist(AnchorLocation, TargetLocation);
+    if (Distance <= FMath::Max(ArrivalRadius, CurrentAnchor->ArrivalRadius))
+    {
+        CurrentAnchor->SetActorLocation(TargetLocation, true);
+        FinishGrappleRelease(false);
+        return;
+    }
+
+    const FVector NewLocation = FMath::VInterpConstantTo(AnchorLocation, TargetLocation, DeltaTime, PullSpeed);
+    CurrentAnchor->SetActorLocation(NewLocation, true);
+}
+
+void UVestigeLimbComponent::FinishGrappleRelease(bool bApplyOwnerExitVelocity)
 {
     ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
-    if (OwnerCharacter)
+    if (bApplyOwnerExitVelocity && OwnerCharacter)
     {
         if (UCharacterMovementComponent* Movement = OwnerCharacter->GetCharacterMovement())
         {
@@ -244,9 +519,7 @@ void UVestigeLimbComponent::FinishGrappleRelease()
         }
     }
 
-    SetGrappleState(EVestigeGrappleState::Releasing);
-    SetGrappleState(EVestigeGrappleState::Retracting);
-    SetCurrentAnchor(nullptr);
     CurrentPullVelocity = FVector::ZeroVector;
-    SetGrappleState(EVestigeGrappleState::Idle);
+    bPullingAnchorToOwner = false;
+    SetTimedGrappleState(EVestigeGrappleState::Releasing, GrappleReleaseDuration);
 }
